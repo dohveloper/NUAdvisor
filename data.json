@@ -1,0 +1,151 @@
+{
+  "students": [
+    {
+      "id": "001352185",
+      "name": "DohyoungKim",
+      "email": "kim.doh@northeastern.edu",
+      "major": "IT",
+      "curriculumModules": [
+        {
+          "priority": 1,
+          "isCompleted": false,
+          "assignedCourse": ""
+        },
+        {
+          "priority": 2,
+          "isCompleted": true,
+          "assignedCourse": "INT2000"
+        }
+      ],
+
+      "possibleCombinations": [
+        {
+          "priority": 20,
+          "fullClass": 0,
+          "onlineClass": 1,
+          "publicClass": 2,
+          "status": "Good/warning/conflict",
+          "selectedClasses": [
+            {
+              "curriculumNumber": 2,
+              "combinedCourseNumber": "CET1100",
+              "crn": 92220,
+              "isOnline": false,
+              "isFull": false,
+              "isPublic": false
+            },
+            {
+              "curriculumNumber": 3,
+              "combinedCourseNumber": "CET1100",
+              "crn": 92220,
+              "isOnline": false,
+              "isFull": false,
+              "isPublic": false
+            },
+            {
+              "curriculumNumber": 6,
+              "combinedCourseNumber": "CET1100",
+              "crn": 92220,
+              "isOnline": false,
+              "isFull": false,
+              "isPublic": false
+            },
+            {
+              "curriculumNumber": 9,
+              "combinedCourseNumber": "CET1100",
+              "crn": 92220,
+              "isOnline": false,
+              "isFull": false,
+              "isPublic": false
+            }
+          ]
+        },
+        {
+          "status": "Good/warning/conflict",
+          "lists": [
+            {
+              "curriculumNumber": 2,
+              "crn": 92220
+            },
+            {
+              "curriculumNumber": 4,
+              "crn": 92220
+            },
+            {
+              "curriculumNumber": 6,
+              "crn": 92220
+            },
+            {
+              "curriculumNumber": 7,
+              "crn": 92220
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "courses": {
+    "INT2000": {
+      "title": "Financial Account",
+      "credit": 3,
+      "classes": [
+        {
+          "combinedCourseNumber": "INT2000",
+          "crn": 90042,
+          "section": "B50",
+          "campusCode": "BOS",
+          "maxEnroll": 30,
+          "enroll": 20,
+          "seatLeft": 10,
+          "part": "1/A/B",
+          "dayOfWeek": "W",
+          "startTime": "1750",
+          "endTime": "2020"
+        },
+        {
+          "combinedCourseNumber": "INT2000",
+          "crn": 90042,
+          "section": "B50",
+          "campusCode": "BOS",
+          "maxEnroll": 30,
+          "enroll": 20,
+          "seatLeft": 10,
+          "part": "1/A/B",
+          "dayOfWeek": "W",
+          "startTime": "1750",
+          "endTime": "2020"
+        }
+      ]
+    }
+  },
+
+  "curriculums": {
+    "IT": {
+      "modules": {
+        "1": {
+          "courseOptions": ["PHL2200", "PHL2210"],
+          "isAvailableCourseExist": true,
+          "availableCourses": [{ "combinedCourseNumber": "PHL2200", "classes": [{}] }]
+        },
+        "2": {
+          "courseOptions": ["PHL2200"],
+          "isAvailableCourseExist": true,
+          "availableCourses": []
+        },
+        "3": {
+          "courseOptions": ["MTH2200"],
+          "isAvailableCourseExist": false,
+          "availableCourses": []
+        }
+      }
+    }
+  },
+
+  "preqcorequisiteTable": {
+    "ENG2100": { "prereqData": "MTH 1100 D- OR MTH 1200 D- OR MTH 2100 D-", "coreq": "ENG2110" },
+    "ENG1107": { "prereqData": "MTH 1100 D- OR MTH 1200 D- OR MTH 2100 D-", "coreq": "ENG2110" },
+    "ENG1103": { "prereqData": "MTH 1100 D- OR MTH 1200 D- OR MTH 2100 D-", "coreq": "ENG2110" },
+    "ENG3105": { "prereqData": "MTH 1100 D- OR MTH 1200 D- OR MTH 2100 D-", "coreq": "ENG2110" }
+  }
+}
