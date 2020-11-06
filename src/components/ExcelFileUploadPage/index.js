@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-import './ExcelFileUpload.css';
+import './ExcelFileUploadPage.css';
 import { readExcelFile } from './ExcelFileReader';
 import { FaDownload, FaUpload } from 'react-icons/fa';
 import { useHistory } from 'react-router-dom';
@@ -26,7 +26,7 @@ function ExcelFileUpload() {
     <div className="file__page">
       <div className="file__box">
         <img src={`${imagePath}/logo.png`} className="file__logo"></img>
-        <p className="file__guide">Please upload an excel file</p>
+        <p className="file__guide">Please upload an excel file (required) </p>
         <button
           id="excelFile_style"
           className="button file__button"

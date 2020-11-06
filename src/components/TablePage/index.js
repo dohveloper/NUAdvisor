@@ -1,15 +1,15 @@
 import React from 'react';
 import Toolbar from './Toolbar';
 import Table from './Table';
-import ExcelFileUpload from './ExcelFileUpload';
+import './Table.css';
 
-function Home() {
+function TablePage() {
   return (
-    <div className="home">
+    <div className="table__page">
       <Toolbar />
       <Table />
     </div>
   );
 }
 
-export default Home;
+export default TablePage;

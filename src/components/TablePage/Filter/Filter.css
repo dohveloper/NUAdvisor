@@ -1,0 +1,39 @@
+.filter__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  height: 36px;
+  margin: 0 5px;
+  padding: 4px 10px;
+  background-color: white;
+
+  border-radius: 5px;
+  border: 1px solid #e1e1e1;
+
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  font-weight: 600;
+  color: #818181;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+.filter__button:hover {
+  background-color: #7f7f7f;
+  color: white;
+}
+.filter__button:hover .filter__arrow {
+  color: white;
+}
+.filter__buttonText {
+  display: inline-block;
+  margin-left: 10px;
+}
+.filter__arrow {
+  width: 16px;
+  color: #8a8a8a;
+  margin-top: 1px;
+  margin-left: 5px;
+}
