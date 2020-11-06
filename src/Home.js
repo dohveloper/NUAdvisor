@@ -8,7 +8,6 @@ function Home() {
     <div className="home">
       <Toolbar />
       <Table />
-      <ExcelFileUpload />
     </div>
   );
 }

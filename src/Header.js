@@ -4,7 +4,7 @@ import './Header.css';
 function Header() {
   return (
     <div className="header">
-      <h1 className="header__logo">Logo</h1>
+      <img className="header__logo" img src={process.env.PUBLIC_URL + '/assets/img/logo(white).png'} />
       <div className="header__profile">profile^</div>
     </div>
   );

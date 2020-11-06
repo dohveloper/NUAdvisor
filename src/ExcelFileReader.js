@@ -1,7 +1,46 @@
-// Input : rows(array) extracted from  student/class/curriculum/preqcoreq xls file
-// Output : javacript object
+/* 
+ Input : rows(array) extracted from  student/class/curriculum/preqcoreq xls file
+ Output : javacript object
+*/
+import XLSX from 'xlsx';
 
-export let dataConverter = (studentRows, classRows, curriculumRows, preqcoreqRows) => {
+export const readExcelFile = (file, callback) => {
+  let reader = new FileReader();
+  const rABS = !!reader.readAsBinaryString;
+  let result;
+
+  reader.onload = e => {
+    /* Parse data */
+    const bstr = e.target.result;
+    const wb = XLSX.read(bstr, { type: rABS ? 'binary' : 'array' });
+    /* Get worksheets */
+    const wsname1 = wb.SheetNames[0];
+    const wsStudent = wb.Sheets[wsname1];
+
+    const wsname2 = wb.SheetNames[1];
+    const wsClass = wb.Sheets[wsname2];
+
+    const wsname3 = wb.SheetNames[2];
+    const wsCurriculum = wb.Sheets[wsname3];
+
+    const wsname4 = wb.SheetNames[3];
+    const wsPrereqCoreq = wb.Sheets[wsname4];
+
+    /* Convert array of arrays */
+    const studentRows = XLSX.utils.sheet_to_json(wsStudent, { header: 1 });
+    const classRows = XLSX.utils.sheet_to_json(wsClass, { header: 1 });
+    const curriculumRows = XLSX.utils.sheet_to_json(wsCurriculum, { header: 1 });
+    const prereqCoreqRows = XLSX.utils.sheet_to_json(wsPrereqCoreq, { header: 1 });
+
+    //convert data into object
+    result = dataConverter(studentRows, classRows, curriculumRows, prereqCoreqRows);
+    callback(result);
+  };
+  if (rABS) reader.readAsBinaryString(file);
+  else reader.readAsArrayBuffer(file);
+};
+
+function dataConverter(studentRows, classRows, curriculumRows, preqcoreqRows) {
   let students;
   let courses;
   let curriculums;
@@ -11,11 +50,8 @@ export let dataConverter = (studentRows, classRows, curriculumRows, preqcoreqRow
   courses = convertClassRows(classRows);
   curriculums = convertCurriculumRows(curriculumRows);
   preqcoreqTable = convertPreqTable(preqcoreqRows);
-  console.log(students);
-  console.log(courses);
-  console.log(curriculums);
-  console.log(preqcoreqTable);
-};
+  return { students, courses, curriculums, preqcoreqTable };
+}
 
 function convertStudentRows(studentRows) {
   //Input: student Rows(array) extracted from xls file

@@ -1,6 +1,10 @@
 import React, { useReducer } from 'react';
-import XLSX from 'xlsx';
-import { dataConverter } from './DataConverter';
+import './ExcelFileUpload.css';
+import { readExcelFile } from './ExcelFileReader';
+import { FaDownload, FaUpload } from 'react-icons/fa';
+import { useHistory } from 'react-router-dom';
+
+const imagePath = process.env.PUBLIC_URL + '/assets/img';
 
 const initialState = {
   excelFile: null
@@ -15,54 +19,54 @@ const reducer = (state, action) => {
   }
 };
 
-const readExcelFile = (file, dispatch) => {
-  let reader = new FileReader();
-  const rABS = !!reader.readAsBinaryString;
-  reader.onload = e => {
-    /* Parse data */
-    const bstr = e.target.result;
-    const wb = XLSX.read(bstr, { type: rABS ? 'binary' : 'array' });
-    /* Get worksheets */
-    const wsname1 = wb.SheetNames[0];
-    const wsStudent = wb.Sheets[wsname1];
-
-    const wsname2 = wb.SheetNames[1];
-    const wsClass = wb.Sheets[wsname2];
-
-    const wsname3 = wb.SheetNames[2];
-    const wsCurriculum = wb.Sheets[wsname3];
-
-    const wsname4 = wb.SheetNames[3];
-    const wsPrereqCoreq = wb.Sheets[wsname4];
-
-    /* Convert array of arrays */
-    const studentRows = XLSX.utils.sheet_to_json(wsStudent, { header: 1 });
-    const classRows = XLSX.utils.sheet_to_json(wsClass, { header: 1 });
-    const curriculumRows = XLSX.utils.sheet_to_json(wsCurriculum, { header: 1 });
-    const prereqCoreqRows = XLSX.utils.sheet_to_json(wsPrereqCoreq, { header: 1 });
-
-    dataConverter(studentRows, classRows, curriculumRows, prereqCoreqRows);
-  };
-  if (rABS) reader.readAsBinaryString(file);
-  else reader.readAsArrayBuffer(file);
-  dispatch({ type: 'upload', value: file });
-};
-
 function ExcelFileUpload() {
   const [excelFile, dispatch] = useReducer(reducer, initialState);
+  const history = useHistory();
   return (
-    <div>
-      <input
-        type="file"
-        name="excelFile"
-        accept=".xls, .xlsx"
-        onChange={e => {
-          readExcelFile(e.target.files[0], dispatch);
-        }}
-        onClick={e => {
-          e.target.value = null;
-        }}
-      />
+    <div className="file__page">
+      <div className="file__box">
+        <img src={`${imagePath}/logo.png`} className="file__logo"></img>
+        <p className="file__guide">Please upload an excel file</p>
+        <button
+          id="excelFile_style"
+          className="button file__button"
+          onClick={() => {
+            document.getElementById('excelFile').click();
+          }}
+        >
+          <FaDownload className="file__buttonIcon" />
+          Download Template File
+        </button>
+        <button
+          id="excelFile_style"
+          className="button file__button"
+          onClick={() => {
+            document.getElementById('excelFile').click();
+          }}
+        >
+          <FaUpload className="file__buttonIcon" />
+          Upload Excel File
+        </button>
+        <input
+          style={{ display: 'none' }}
+          type="file"
+          id="excelFile"
+          name="excelFile"
+          accept=".xls, .xlsx"
+          onChange={e => {
+            readExcelFile(e.target.files[0], result => {
+              dispatch({ type: 'upload', value: result });
+              history.push('/');
+            });
+          }}
+          onClick={e => {
+            e.target.value = null;
+          }}
+        />
+        <div className="file__blackBottom"></div>
+      </div>
+
+      {console.log(excelFile)}
     </div>
   );
 }
