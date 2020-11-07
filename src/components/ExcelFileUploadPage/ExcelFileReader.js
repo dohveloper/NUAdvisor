@@ -102,6 +102,7 @@ function convertStudentRows(studentRows) {
         curriculumModuleTemp.assignedCourse = row[3 + i];
       } else {
         curriculumModuleTemp.isCompleted = false;
+        curriculumModuleTemp.assignedCourse = '';
       }
       studentTemp.curriculumModules.push(curriculumModuleTemp);
     }
