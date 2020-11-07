@@ -1,7 +1,4 @@
 export let setAvailableCourses = (courses, curriculums) => {
-  let subjectCode;
-  let courseNumbers;
-
   /*
   [purpose]: Get available modules & courses for curriculums for this term (is class of Module courseOption exist)
   [result]: Update curriculums data with ("isAvailableCourseExist","availableCourses")
@@ -11,8 +8,10 @@ export let setAvailableCourses = (courses, curriculums) => {
     //Repeat for all curriculums
     for (let i = 1; i < Object.keys(curriculum.modules).length + 1; i++) {
       let selectedModule = curriculum.modules[i];
-      //Check whether if there are courses for any of courses Options
+      //Repeat for all courses Options
       selectedModule.courseOptions.forEach(courseOption => {
+        let subjectCode;
+        let courseNumbers;
         if (courseOption.includes('*')) {
           //Case 1. CourseOption with *
           //1.1 Extract subjectCode ex)ITC* -> ITC

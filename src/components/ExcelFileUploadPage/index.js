@@ -3,7 +3,7 @@ import './ExcelFileUploadPage.css';
 import { readExcelFile } from './ExcelFileReader';
 import { FaDownload, FaUpload } from 'react-icons/fa';
 import { useHistory } from 'react-router-dom';
-import { setAvailableCourses, setNextCrns } from './nuadvisor';
+import { setAvailableCourses } from './nuadvisor';
 
 const imagePath = process.env.PUBLIC_URL + '/assets/img';
 
@@ -26,7 +26,7 @@ function ExcelFileUpload() {
   return (
     <div className="file__page">
       <div className="file__box">
-        <img src={`${imagePath}/logo.png`} className="file__logo" />
+        <img src={`${imagePath}/logo.png`} alt="logo" className="file__logo" />
         <p className="file__guide">Please upload an excel file (required) </p>
         <button
           id="excelFile_style"
