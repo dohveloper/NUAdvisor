@@ -1,0 +1,3324 @@
+{
+    "students": [
+      {
+        "major": "IT",
+        "id": "01352184",
+        "name": "Doh Kim",
+        "email": "kim.doh@northeastern.edu",
+        "curriculumModules": [
+          {
+            "priority": 1,
+            "isCompleted": true,
+            "assignedCourse": "PHL2100"
+          },
+          {
+            "priority": 2,
+            "isCompleted": true,
+            "assignedCourse": "ANT2321"
+          },
+          {
+            "priority": 3,
+            "isCompleted": false,
+            "assignedCourse": ""
+          },
+          {
+            "priority": 4,
+            "isCompleted": false,
+            "assignedCourse": ""
+          }
+        ]
+      },
+      {
+        "major": "IT",
+        "id": 1352181,
+        "name": "Young Park",
+        "email": "park.young@northeastern.edu",
+        "curriculumModules": [
+          {
+            "priority": 1,
+            "isCompleted": true,
+            "assignedCourse": "PHL2100"
+          },
+          {
+            "priority": 2,
+            "isCompleted": true,
+            "assignedCourse": "ANT2321"
+          }
+        ]
+      }
+    ],
+    "courses": {
+      "PHL2100": {
+        "title": "Financial Accounting",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "PHL2100",
+            "crn": "90042",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 30,
+            "seatLeft": 0,
+            "part": "1",
+            "dayOfWeek": "W",
+            "startTime": "1750",
+            "endTime": "2020"
+          },
+          {
+            "combinedCourseNumber": "PHL2100",
+            "crn": "90180",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 15,
+            "enroll": 15,
+            "seatLeft": 0,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1750",
+            "endTime": "2020"
+          },
+          {
+            "combinedCourseNumber": "PHL2100",
+            "crn": "90038",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 30,
+            "seatLeft": 0,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1750",
+            "endTime": "2020"
+          }
+        ]
+      },
+      "ANT1150": {
+        "title": "Managerial Accounting",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "ANT1150",
+            "crn": "90040",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 0,
+            "seatLeft": 30,
+            "part": "1",
+            "dayOfWeek": "W",
+            "startTime": "1750",
+            "endTime": "2020"
+          }
+        ]
+      },
+      "ENG1105": {
+        "title": "Cost Accounting",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "ENG1105",
+            "crn": "90034",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 25,
+            "seatLeft": 5,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1750",
+            "endTime": "2020"
+          }
+        ]
+      },
+      "ENG1106": {
+        "title": "Fin Reporting & Analysis 1",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "ENG1106",
+            "crn": "90036",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 20,
+            "seatLeft": 10,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1750",
+            "endTime": "2020"
+          }
+        ]
+      },
+      "ENG1107": {
+        "title": "Fin Reporting & Analysis 2",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "ENG1107",
+            "crn": "90356",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 24,
+            "seatLeft": 6,
+            "part": "1",
+            "dayOfWeek": "W",
+            "startTime": "1450",
+            "endTime": "1720"
+          }
+        ]
+      },
+      "ENG1108": {
+        "title": "Principles of Taxation",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "ENG1108",
+            "crn": "90029",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 16,
+            "seatLeft": 14,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1515",
+            "endTime": "1745"
+          }
+        ]
+      },
+      "ENG3105": {
+        "title": "Organizational Communication",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "ENG3105",
+            "crn": "90305",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 30,
+            "seatLeft": 0,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1040",
+            "endTime": "1310"
+          }
+        ]
+      },
+      "ENG3106": {
+        "title": "Professional Speaking",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "ENG3106",
+            "crn": "90013",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 17,
+            "seatLeft": 13,
+            "part": "1",
+            "dayOfWeek": "W",
+            "startTime": "1750",
+            "endTime": "2020"
+          }
+        ]
+      },
+      "MTH1100": {
+        "title": "Negotiation",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "MTH1100",
+            "crn": "90037",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 5,
+            "seatLeft": 25,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1450",
+            "endTime": "1720"
+          },
+          {
+            "combinedCourseNumber": "MTH1100",
+            "crn": "90328",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 8,
+            "seatLeft": 22,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1750",
+            "endTime": "2020"
+          }
+        ]
+      },
+      "MTH2550": {
+        "title": "Intercultural Communication",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "MTH2550",
+            "crn": "90033",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 16,
+            "seatLeft": 14,
+            "part": "1",
+            "dayOfWeek": "W",
+            "startTime": "1335",
+            "endTime": "1605"
+          }
+        ]
+      },
+      "MGT1100": {
+        "title": "Principles of Microeconomics",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "MGT1100",
+            "crn": "90011",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 26,
+            "enroll": 23,
+            "seatLeft": 3,
+            "part": "1",
+            "dayOfWeek": "F",
+            "startTime": "1750",
+            "endTime": "2020"
+          },
+          {
+            "combinedCourseNumber": "MGT1100",
+            "crn": "90023",
+            "section": "B50",
+            "campusCode": "BRD",
+            "maxEnroll": 25,
+            "enroll": 0,
+            "seatLeft": 25,
+            "part": "1",
+            "dayOfWeek": "W",
+            "startTime": "1750",
+            "endTime": "2020"
+          }
+        ]
+      },
+      "MGT2310": {
+        "title": "Principles of Macroeconomics",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "MGT2310",
+            "crn": "90032",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 27,
+            "seatLeft": 3,
+            "part": "1",
+            "dayOfWeek": "W",
+            "startTime": "1450",
+            "endTime": "1720"
+          },
+          {
+            "combinedCourseNumber": "MGT2310",
+            "crn": "90246",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 30,
+            "seatLeft": 0,
+            "part": "1",
+            "dayOfWeek": "M",
+            "startTime": "1640",
+            "endTime": "1910"
+          }
+        ]
+      },
+      "ITC1100": {
+        "title": "College Wrtg 1-Nonnative Spkrs",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "ITC1100",
+            "crn": "90177",
+            "section": "B51",
+            "campusCode": "BOS",
+            "maxEnroll": 15,
+            "enroll": 0,
+            "seatLeft": 15,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1335",
+            "endTime": "1605"
+          }
+        ]
+      },
+      "ITC1200": {
+        "title": "Lab for ENG 1103",
+        "credit": 1,
+        "classes": [
+          {
+            "combinedCourseNumber": "ITC1200",
+            "crn": "90181",
+            "section": "B50",
+            "campusCode": "VTL",
+            "maxEnroll": 15,
+            "enroll": 15,
+            "seatLeft": 0,
+            "part": "1",
+            "dayOfWeek": "VTL"
+          }
+        ]
+      },
+      "ITC2016": {
+        "title": "Lab for ENG 1103",
+        "credit": 1,
+        "classes": [
+          {
+            "combinedCourseNumber": "ITC2016",
+            "crn": "90178",
+            "section": "B51",
+            "campusCode": "VTL",
+            "maxEnroll": 15,
+            "enroll": 0,
+            "seatLeft": 15,
+            "part": "1",
+            "dayOfWeek": "VTL"
+          }
+        ]
+      },
+      "ITC2000": {
+        "title": "Writing Workshop",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "ITC2000",
+            "crn": "90252",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 20,
+            "enroll": 7,
+            "seatLeft": 13,
+            "part": "1",
+            "dayOfWeek": "W",
+            "startTime": "1750",
+            "endTime": "2020"
+          }
+        ]
+      },
+      "ITC2400": {
+        "title": "Lab for ENG 2105",
+        "credit": 1,
+        "classes": [
+          {
+            "combinedCourseNumber": "ITC2400",
+            "crn": "90253",
+            "section": "B50",
+            "campusCode": "VTL",
+            "maxEnroll": 20,
+            "enroll": 7,
+            "seatLeft": 13,
+            "part": "1",
+            "dayOfWeek": "VTL"
+          }
+        ]
+      },
+      "ITC2100": {
+        "title": "Writing for Prof - Bus & Soc S",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "ITC2100",
+            "crn": "90035",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 20,
+            "enroll": 0,
+            "seatLeft": 20,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1335",
+            "endTime": "1605"
+          }
+        ]
+      },
+      "ITC2200": {
+        "title": "Writing for Prof - Bus & Soc S",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "ITC2200",
+            "crn": "90283",
+            "section": "B51",
+            "campusCode": "BRD",
+            "maxEnroll": 20,
+            "enroll": 20,
+            "seatLeft": 0,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "0930",
+            "endTime": "1200"
+          }
+        ]
+      },
+      "ITC2300": {
+        "title": "Lab for ENG 3107",
+        "credit": 1,
+        "classes": [
+          {
+            "combinedCourseNumber": "ITC2300",
+            "crn": "90176",
+            "section": "B50",
+            "campusCode": "VTL",
+            "maxEnroll": 20,
+            "enroll": 0,
+            "seatLeft": 20,
+            "part": "1",
+            "dayOfWeek": "VTL"
+          }
+        ]
+      },
+      "GET2100": {
+        "title": "Lab for ENG 3107",
+        "credit": 1,
+        "classes": [
+          {
+            "combinedCourseNumber": "GET2100",
+            "crn": "90284",
+            "section": "B51",
+            "campusCode": "VTL",
+            "maxEnroll": 21,
+            "enroll": 20,
+            "seatLeft": 1,
+            "part": "1",
+            "dayOfWeek": "VTL"
+          }
+        ]
+      },
+      "ITC1240": {
+        "title": "Intro to Corporate Finance",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "ITC1240",
+            "crn": "90031",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 18,
+            "seatLeft": 12,
+            "part": "1",
+            "dayOfWeek": "W",
+            "startTime": "1145",
+            "endTime": "1415"
+          }
+        ]
+      },
+      "FIN3310": {
+        "title": "Financial Institutions & Mkts",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "FIN3310",
+            "crn": "90247",
+            "section": "B50",
+            "campusCode": "BRD",
+            "maxEnroll": 26,
+            "enroll": 26,
+            "seatLeft": 0,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1330",
+            "endTime": "1500"
+          }
+        ]
+      },
+      "FIN3330": {
+        "title": "Risk Management & Insurance",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "FIN3330",
+            "crn": "90249",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 25,
+            "enroll": 25,
+            "seatLeft": 0,
+            "part": "1",
+            "dayOfWeek": "M",
+            "startTime": "1750",
+            "endTime": "2020"
+          }
+        ]
+      },
+      "FIN3340": {
+        "title": "Investments",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "FIN3340",
+            "crn": "90030",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 25,
+            "enroll": 13,
+            "seatLeft": 12,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1750",
+            "endTime": "2020"
+          }
+        ]
+      },
+      "FIN4230": {
+        "title": "International Finance",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "FIN4230",
+            "crn": "90248",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 25,
+            "enroll": 6,
+            "seatLeft": 19,
+            "part": "1",
+            "dayOfWeek": "F",
+            "startTime": "1335",
+            "endTime": "1605"
+          }
+        ]
+      },
+      "LDR1200": {
+        "title": "Assess Your LeadershipCapacity",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "LDR1200",
+            "crn": "90041",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 30,
+            "seatLeft": 0,
+            "part": "1",
+            "dayOfWeek": "M",
+            "startTime": "1300",
+            "endTime": "1530"
+          }
+        ]
+      },
+      "LDR3200": {
+        "title": "Leading & Managing Change",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "LDR3200",
+            "crn": "90326",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 5,
+            "seatLeft": 25,
+            "part": "B",
+            "dayOfWeek": "W",
+            "startTime": "1750",
+            "endTime": "2035"
+          }
+        ]
+      },
+      "LDR3250": {
+        "title": "Leading Teams Local & Virtual",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "LDR3250",
+            "crn": "90327",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 12,
+            "seatLeft": 18,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1750",
+            "endTime": "2020"
+          }
+        ]
+      },
+      "LDR3400": {
+        "title": "EvidenceBased Ldrshp/Decsn Mkg",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "LDR3400",
+            "crn": "90015",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 9,
+            "seatLeft": 21,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1750",
+            "endTime": "2020"
+          }
+        ]
+      },
+      "LDR4850": {
+        "title": "Strategic Decision Making",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "LDR4850",
+            "crn": "90306",
+            "section": "B50",
+            "campusCode": "VTL",
+            "maxEnroll": 25,
+            "enroll": 10,
+            "seatLeft": 15,
+            "part": "1",
+            "dayOfWeek": "VTL"
+          }
+        ]
+      },
+      "MGT2210": {
+        "title": "Information within Enterprise",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "MGT2210",
+            "crn": "90421",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 30,
+            "seatLeft": 0,
+            "part": "1",
+            "dayOfWeek": "M",
+            "startTime": "1750",
+            "endTime": "1910"
+          },
+          {
+            "combinedCourseNumber": "MGT2210",
+            "crn": "90450",
+            "section": "B51",
+            "campusCode": "BRD",
+            "maxEnroll": 30,
+            "enroll": 30,
+            "seatLeft": 0,
+            "part": "1",
+            "dayOfWeek": "W",
+            "startTime": "1750",
+            "endTime": "2020"
+          }
+        ]
+      },
+      "MGT2330": {
+        "title": "Business Law",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "MGT2330",
+            "crn": "90028",
+            "section": "B50",
+            "campusCode": "BRD",
+            "maxEnroll": 26,
+            "enroll": 25,
+            "seatLeft": 1,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1750",
+            "endTime": "2020"
+          }
+        ]
+      },
+      "MGT3220": {
+        "title": "International Business",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "MGT3220",
+            "crn": "90250",
+            "section": "B50",
+            "campusCode": "BRD",
+            "maxEnroll": 25,
+            "enroll": 13,
+            "seatLeft": 12,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1335",
+            "endTime": "1605"
+          }
+        ]
+      },
+      "MGT4210": {
+        "title": "Project Management",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "MGT4210",
+            "crn": "90251",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 25,
+            "enroll": 16,
+            "seatLeft": 9,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1750",
+            "endTime": "2020"
+          }
+        ]
+      },
+      "MGT4230": {
+        "title": "New Venture Creation",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "MGT4230",
+            "crn": "90422",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 0,
+            "seatLeft": 30,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1445",
+            "endTime": "1605"
+          },
+          {
+            "combinedCourseNumber": "MGT4230",
+            "crn": "90497",
+            "section": "B51",
+            "campusCode": "BOS",
+            "maxEnroll": 20,
+            "enroll": 15,
+            "seatLeft": 5,
+            "part": "1",
+            "dayOfWeek": "M",
+            "startTime": "1445",
+            "endTime": "1605"
+          },
+          {
+            "combinedCourseNumber": "MGT4230",
+            "crn": "90498",
+            "section": "B52",
+            "campusCode": "BOS",
+            "maxEnroll": 20,
+            "enroll": 14,
+            "seatLeft": 6,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1445",
+            "endTime": "1605"
+          }
+        ]
+      },
+      "MGT4850": {
+        "title": "Business Strategy",
+        "credit": 4,
+        "classes": [
+          {
+            "combinedCourseNumber": "MGT4850",
+            "crn": "90027",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 20,
+            "enroll": 18,
+            "seatLeft": 2,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1750",
+            "endTime": "2020"
+          }
+        ]
+      },
+      "MKT2100": {
+        "title": "Principles of Marketing",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "MKT2100",
+            "crn": "90322",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 25,
+            "enroll": 25,
+            "seatLeft": 0,
+            "part": "1",
+            "dayOfWeek": "M",
+            "startTime": "1335",
+            "endTime": "1605"
+          }
+        ]
+      },
+      "MTH2300": {
+        "title": "Business Statistics",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "MTH2300",
+            "crn": "90039",
+            "section": "B50",
+            "campusCode": "BRD",
+            "maxEnroll": 12,
+            "enroll": 0,
+            "seatLeft": 12,
+            "part": "1",
+            "dayOfWeek": "M",
+            "startTime": "1400",
+            "endTime": "1630"
+          }
+        ]
+      },
+      "MTH2310": {
+        "title": "Statistics for Behav & Soc Sci",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "MTH2310",
+            "crn": "90260",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 23,
+            "seatLeft": 7,
+            "part": "1",
+            "dayOfWeek": "T",
+            "startTime": "1335",
+            "endTime": "1605"
+          }
+        ]
+      },
+      "POL1120": {
+        "title": "International Relations",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "POL1120",
+            "crn": "90302",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 30,
+            "seatLeft": 0,
+            "part": "1",
+            "dayOfWeek": "F",
+            "startTime": "1000",
+            "endTime": "1230"
+          }
+        ]
+      },
+      "PSY1100": {
+        "title": "Foundations of Psychology",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "PSY1100",
+            "crn": "90010",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 20,
+            "seatLeft": 10,
+            "part": "1",
+            "dayOfWeek": "M",
+            "startTime": "1750",
+            "endTime": "2020"
+          }
+        ]
+      },
+      "SOC1100": {
+        "title": "Introduction to Sociology",
+        "credit": 3,
+        "classes": [
+          {
+            "combinedCourseNumber": "SOC1100",
+            "crn": "90341",
+            "section": "B50",
+            "campusCode": "BOS",
+            "maxEnroll": 30,
+            "enroll": 18,
+            "seatLeft": 12,
+            "part": "1",
+            "dayOfWeek": "W",
+            "startTime": "1750",
+            "endTime": "2020"
+          }
+        ]
+      }
+    },
+    "curriculums": [],
+    "preqcoreqTable": {
+      "ACC 2100": {
+        "prereqData": "MTH 1100 D- \r\nOR MTH 1200 D- \r\nOR MTH 2100 D-",
+        "coreq": ""
+      },
+      "ACC 2200": {
+        "prereqData": "ACC 2100 D-",
+        "coreq": ""
+      },
+      "ACC 3103": {
+        "prereqData": "ACC 2200 D- \r\nOR ACC 1404 D-",
+        "coreq": ""
+      },
+      "ACC 3201": {
+        "prereqData": "ACC 2200 D- \r\nOR ACC 1404 D-",
+        "coreq": ""
+      },
+      "ACC 3202": {
+        "prereqData": "ACC 3201 D-",
+        "coreq": ""
+      },
+      "ACC 3410": {
+        "prereqData": "ACC 3201 D-",
+        "coreq": ""
+      },
+      "ACC 4320": {
+        "prereqData": "( ACC 3202 D- \r\nOR ACC 4307 D-) \r\nAND FIN 3310 D- \r\nAND ACC 3410 D-",
+        "coreq": ""
+      },
+      "ACC 4330": {
+        "prereqData": "ACC 3202 D- \r\nOR ACC 4307 D-",
+        "coreq": ""
+      },
+      "ACC 4410": {
+        "prereqData": "ACC 3410 D-",
+        "coreq": ""
+      },
+      "ACC 4420": {
+        "prereqData": "( ACC 3202 D- \r\nOR ACC 4307 D-)\r\nAND ACC 3410 D-",
+        "coreq": ""
+      },
+      "ACC 6230": {
+        "prereqData": "ACC 6210 C- \r\nAND ACC 6220 C-",
+        "coreq": ""
+      },
+      "ALY 6980": {
+        "prereqData": "ALY 6080 C-",
+        "coreq": ""
+      },
+      "ART 2200": {
+        "prereqData": "ART 2000 D-",
+        "coreq": ""
+      },
+      "ART 3100": {
+        "prereqData": "ART 2100 D- \r\nOR ART 2105 D-",
+        "coreq": ""
+      },
+      "ART 3110": {
+        "prereqData": "ART 2000 D- \r\nAND ( ART 2100 D- \r\nOR ART 2105 D-)",
+        "coreq": ""
+      },
+      "ART 4100": {
+        "prereqData": "ART 3100 D- \r\nAND ART 3110 D-",
+        "coreq": ""
+      },
+      "ART 4110": {
+        "prereqData": "ART 4100 D-",
+        "coreq": ""
+      },
+      "ART 4120": {
+        "prereqData": "ART 4110 D-",
+        "coreq": ""
+      },
+      "AVM 2400": {
+        "prereqData": "AVM 1100",
+        "coreq": ""
+      },
+      "AVM 3100": {
+        "prereqData": "AVM 2400",
+        "coreq": ""
+      },
+      "AVM 4100": {
+        "prereqData": "EET 3100 AND MET 4100",
+        "coreq": ""
+      },
+      "AVM 4200": {
+        "prereqData": "AVM 1100 AND AVM 2400 AND MET 2000",
+        "coreq": ""
+      },
+      "AVM 4300": {
+        "prereqData": "AVM 1150",
+        "coreq": ""
+      },
+      "BIO 1100": {
+        "prereqData": "",
+        "coreq": "BIO 1101"
+      },
+      "BIO 1101": {
+        "prereqData": "",
+        "coreq": "BIO 1100"
+      },
+      "BIO 1200": {
+        "prereqData": "BIO 1100 D- \r\nAND BIO 1101 D-",
+        "coreq": "BIO 1201"
+      },
+      "BIO 1201": {
+        "prereqData": "BIO 1100 D- \r\nAND BIO 1101 D-",
+        "coreq": "BIO 1200"
+      },
+      "BIO 1600": {
+        "prereqData": "BIO 1200 D- \r\nAND BIO 1201 D-",
+        "coreq": "BIO 1601"
+      },
+      "BIO 1601": {
+        "prereqData": "BIO 1200 D- \r\nAND BIO 1201 D-",
+        "coreq": "BIO 1600"
+      },
+      "BIO 1700": {
+        "prereqData": "BIO 1600 D- \r\nAND BIO 1601 D-",
+        "coreq": "BIO 1701"
+      },
+      "BIO 1701": {
+        "prereqData": "BIO 1600 D- \r\nAND BIO 1601 D-",
+        "coreq": "BIO 1700"
+      },
+      "BIO 2100": {
+        "prereqData": "BIO 1200 D- \r\nAND BIO 1201 D-",
+        "coreq": "BIO 2101"
+      },
+      "BIO 2101": {
+        "prereqData": "BIO 1200 D- \r\nAND BIO 1201 D-",
+        "coreq": "BIO 2100"
+      },
+      "BIO 2300": {
+        "prereqData": "BIO 1200 D- \r\nAND BIO 1201 D-",
+        "coreq": ""
+      },
+      "BIO 2500": {
+        "prereqData": "BIO 1200 D- \r\nAND BIO 1201 D-",
+        "coreq": "BIO 2501"
+      },
+      "BIO 2501": {
+        "prereqData": "BIO 1200 D- \r\nAND BIO 1201 D-",
+        "coreq": "BIO 2500"
+      },
+      "BIO 3100": {
+        "prereqData": "BIO 1200 D- \r\nAND BIO 1201 D-",
+        "coreq": "BIO 3101"
+      },
+      "BIO 3101": {
+        "prereqData": "BIO 1200 D- \r\nAND BIO 1201 D-",
+        "coreq": "BIO 3100"
+      },
+      "BIO 4215": {
+        "prereqData": "BIO 1200 D- \r\nAND BIO 1201 D-",
+        "coreq": ""
+      },
+      "BIO 4850": {
+        "prereqData": "BIO 2300 D- \r\nAND BIO 2500 D-",
+        "coreq": ""
+      },
+      "BTC 1300": {
+        "prereqData": "BIO 1200 D- \r\nAND BIO 1201 D-",
+        "coreq": ""
+      },
+      "BTC 3300": {
+        "prereqData": "BIO 1200 D- \r\nAND BIO 1201 D-",
+        "coreq": ""
+      },
+      "BTC 4200": {
+        "prereqData": "BTC 1300 D- \r\nAND BIO 2500 D-",
+        "coreq": ""
+      },
+      "BTC 4300": {
+        "prereqData": "BTC 1300 D- \r\nAND BIO 2300 D-",
+        "coreq": ""
+      },
+      "BTC 4450": {
+        "prereqData": "BTC 1300 D- \r\nAND ( MTH 2300 D- \r\nOR MTH 2310 D- \r\nOR MTH 3300 D-)",
+        "coreq": ""
+      },
+      "BTC 4850": {
+        "prereqData": "BIO 2300 D- \r\nAND BIO 2500 D-",
+        "coreq": ""
+      },
+      "BTC 6211": {
+        "prereqData": "RGA 6210 C-",
+        "coreq": ""
+      },
+      "BTC 6213": {
+        "prereqData": "RGA 6100 C- \r\nOR RGA 6201 C-",
+        "coreq": ""
+      },
+      "CED 6040": {
+        "prereqData": "CED 6030 C-",
+        "coreq": ""
+      },
+      "CED 6910": {
+        "prereqData": "CED 6010 C- \r\nAND CED 6020 C- \r\nAND CED 6030 C- \r\nAND CED 6040 C-",
+        "coreq": ""
+      },
+      "CET 2100": {
+        "prereqData": "GET 1100 D- \r\nOR ITC 1200 D-",
+        "coreq": ""
+      },
+      "CET 2200": {
+        "prereqData": "GET 2100 D- \r\nOR ITC 2100 D-",
+        "coreq": ""
+      },
+      "CET 2300": {
+        "prereqData": "CET 2200 D-",
+        "coreq": ""
+      },
+      "CET 3000": {
+        "prereqData": "CET 2100 D- \r\nAND CET 2200 D-",
+        "coreq": ""
+      },
+      "CET 3100": {
+        "prereqData": "CET 2100 D- \r\nAND CET 2200 D-",
+        "coreq": ""
+      },
+      "CET 4200": {
+        "prereqData": "CET 2100 D- \r\nAND EET 3300 D-",
+        "coreq": ""
+      },
+      "CET 4210": {
+        "prereqData": "CET 2100 D- \r\nAND EET 3100 D- \r\nAND EET 3300 D-",
+        "coreq": ""
+      },
+      "CET 4220": {
+        "prereqData": "CET 2100 D- \r\nAND EET 3300 D-",
+        "coreq": ""
+      },
+      "CET 4230": {
+        "prereqData": "CET 3100 D-",
+        "coreq": ""
+      },
+      "CET 4240": {
+        "prereqData": "( CET 2200 D- \r\nOR ITC 2100 D-) \r\nAND CET 2300 D-",
+        "coreq": ""
+      },
+      "CET 4250": {
+        "prereqData": "CET 2100 D- \r\nAND CET 2200 D-",
+        "coreq": ""
+      },
+      "CHM 1100": {
+        "prereqData": "",
+        "coreq": "CHM 1101"
+      },
+      "CHM 1101": {
+        "prereqData": "",
+        "coreq": "CHM 1100"
+      },
+      "CHM 1200": {
+        "prereqData": "CHM 1100 D- \r\nAND CHM 1101 D-",
+        "coreq": "CHM 1201"
+      },
+      "CHM 1201": {
+        "prereqData": "CHM 1100 D- \r\nAND CHM 1101 D-",
+        "coreq": "CHM 1200"
+      },
+      "CHM 2110": {
+        "prereqData": "CHM 1200 D- \r\nAND CHM 1201 D-",
+        "coreq": "CHM 2111"
+      },
+      "CHM 2111": {
+        "prereqData": "CHM 1200 D- \r\nAND CHM 1201 D-",
+        "coreq": "CHM 2110"
+      },
+      "CHM 2200": {
+        "prereqData": "CHM 2110 D- \r\nAND CHM 2111 D-",
+        "coreq": "CHM 2201"
+      },
+      "CHM 2201": {
+        "prereqData": "CHM 2110 D- \r\nAND CHM 2111 D-",
+        "coreq": "CHM 2200"
+      },
+      "CHM 2300": {
+        "prereqData": "CHM 1200 D- \r\nAND CHM 1201 D-",
+        "coreq": "CHM 2301"
+      },
+      "CHM 2301": {
+        "prereqData": "CHM 1200 D- \r\nAND CHM 1201 D-",
+        "coreq": "CHM 2300"
+      },
+      "CMN 2310": {
+        "prereqData": "ENG 1103 D- \r\nOR ENG 1105 D-",
+        "coreq": ""
+      },
+      "CMN 3100": {
+        "prereqData": "CMN 1100 D- \r\nOR CMN 1103 D- \r\nOR CMN 2210 D-",
+        "coreq": ""
+      },
+      "CMN 3220": {
+        "prereqData": "CMN 1100 D- \r\nOR CMN 1103 D- \r\nOR CMN 2210 D-",
+        "coreq": ""
+      },
+      "CMN 3330": {
+        "prereqData": "CMN 1100 D- \r\nOR CMN 1103 D- \r\nOR CMN 2210 D-",
+        "coreq": ""
+      },
+      "CMN 3340": {
+        "prereqData": "CMN 1100 D- \r\nOR CMN 1103 D- \r\nOR CMN 2210 D-",
+        "coreq": ""
+      },
+      "CMN 3350": {
+        "prereqData": "CMN 1100 D- \r\nOR CMN 1103 D- \r\nOR CMN 2210 D-",
+        "coreq": ""
+      },
+      "CMN 3360": {
+        "prereqData": "( CMN 1100 D- \r\nOR CMN 1103 D- \r\nOR CMN 2210 D-) \r\nAND CMN 2310 D-",
+        "coreq": ""
+      },
+      "CMN 3400": {
+        "prereqData": "CMN 1100 D- \r\nOR CMN 1103 D- \r\nOR CMN 2210 D-",
+        "coreq": ""
+      },
+      "CMN 4220": {
+        "prereqData": "CMN 3400 D- \r\nAND ( MTH 2300 D- \r\nOR MTH 2310 D- \r\nOR MTH 3300 D-)",
+        "coreq": ""
+      },
+      "CMN 4850": {
+        "prereqData": "CMN 4220 D-",
+        "coreq": ""
+      },
+      "CMN 6000": {
+        "prereqData": "",
+        "coreq": "INT 6000"
+      },
+      "CMN 6010": {
+        "prereqData": "CMN 6000 C-",
+        "coreq": ""
+      },
+      "CMN 6045": {
+        "prereqData": "CMN 6015 C- \r\nOR CMN 6025 C-",
+        "coreq": ""
+      },
+      "CMN 6065": {
+        "prereqData": "CMN 6045 C-",
+        "coreq": ""
+      },
+      "CMN 6090": {
+        "prereqData": "CMN 6010 C-",
+        "coreq": ""
+      },
+      "CMN 6100": {
+        "prereqData": "CMN 6010 C-",
+        "coreq": ""
+      },
+      "CMN 6910": {
+        "prereqData": "CMN 6010 C- \r\nAND CMN 6100 C-",
+        "coreq": ""
+      },
+      "DGM 6122": {
+        "prereqData": "DGM 6105 C- \r\nOR DGM 6108 C-",
+        "coreq": ""
+      },
+      "DGM 6125": {
+        "prereqData": "DGM 6122 C-",
+        "coreq": ""
+      },
+      "DGM 6217": {
+        "prereqData": "DGM 6105 C-",
+        "coreq": ""
+      },
+      "DGM 6268": {
+        "prereqData": "DGM 6168 C-",
+        "coreq": ""
+      },
+      "DGM 6290": {
+        "prereqData": "DGM 6285 C-",
+        "coreq": ""
+      },
+      "DGM 6300": {
+        "prereqData": "DGM 6105 C-",
+        "coreq": ""
+      },
+      "DGM 6302": {
+        "prereqData": "DGM 6300 C- \r\nOR DGM 6305 C-",
+        "coreq": ""
+      },
+      "DGM 6307": {
+        "prereqData": "DGM 6302 C-",
+        "coreq": ""
+      },
+      "DGM 6308": {
+        "prereqData": "DGM 6108 C-\r\nAND DGM 6501 C-",
+        "coreq": ""
+      },
+      "DGM 6322": {
+        "prereqData": "DGM 6122 C-",
+        "coreq": ""
+      },
+      "DGM 6400": {
+        "prereqData": "DGM 6108 C-",
+        "coreq": ""
+      },
+      "DGM 6405": {
+        "prereqData": "DGM 6400 C- \r\nAND DGM 6508 C-",
+        "coreq": ""
+      },
+      "DGM 6408": {
+        "prereqData": "DGM 6405 C- \r\nAND DGM 6308 C-",
+        "coreq": ""
+      },
+      "DGM 6410": {
+        "prereqData": "DGM 6405 C-",
+        "coreq": ""
+      },
+      "DGM 6435": {
+        "prereqData": "DGM 6122 C- \r\nAND DGM 6506 C-",
+        "coreq": ""
+      },
+      "DGM 6440": {
+        "prereqData": "DGM 6435 C-",
+        "coreq": ""
+      },
+      "DGM 6450": {
+        "prereqData": "DGM 6105 C-",
+        "coreq": ""
+      },
+      "DGM 6451": {
+        "prereqData": "DGM 6108 C- \r\nAND DGM 6511 C-",
+        "coreq": ""
+      },
+      "DGM 6456": {
+        "prereqData": "DGM 6435 C- \r\nOR DGM 6461 C-",
+        "coreq": ""
+      },
+      "DGM 6461": {
+        "prereqData": "DGM 6168 C- \r\nOR TCC 6110 C-",
+        "coreq": ""
+      },
+      "DGM 6463": {
+        "prereqData": "DGM 6461 C- \r\nAND DGM 6217 C-",
+        "coreq": ""
+      },
+      "DGM 6471": {
+        "prereqData": "DGM 6461 C-",
+        "coreq": ""
+      },
+      "DGM 6508": {
+        "prereqData": "DGM 6108 C-",
+        "coreq": ""
+      },
+      "DGM 6510": {
+        "prereqData": "DGM 6505 C- \r\nAND DGM 6450 C-",
+        "coreq": ""
+      },
+      "DGM 6511": {
+        "prereqData": "DGM 6501 C-",
+        "coreq": ""
+      },
+      "DGM 6514": {
+        "prereqData": "DGM 6511 C-",
+        "coreq": ""
+      },
+      "DGM 6518": {
+        "prereqData": "DGM 6308 C- \r\nOR DGM 6405 C-",
+        "coreq": ""
+      },
+      "DGM 6519": {
+        "prereqData": "DGM 6518 C-",
+        "coreq": ""
+      },
+      "DGM 6520": {
+        "prereqData": "DGM 6506 C-",
+        "coreq": ""
+      },
+      "DGM 6530": {
+        "prereqData": "DGM 6450 C- \r\nAND DGM 6510 C-",
+        "coreq": ""
+      },
+      "DGM 6531": {
+        "prereqData": "DGM 6108 C- \r\nAND DGM 6530 C-",
+        "coreq": ""
+      },
+      "DGM 6532": {
+        "prereqData": "DGM 6531 C-",
+        "coreq": ""
+      },
+      "DGM 6535": {
+        "prereqData": "DGM 6530 C-",
+        "coreq": ""
+      },
+      "DGM 6540": {
+        "prereqData": "( DGM 6515 C- \r\nAND DGM 6530 C-) \r\nOR DGM 6440 C-",
+        "coreq": ""
+      },
+      "DGM 6545": {
+        "prereqData": "DGM 6430 C- \r\nOR DGM 6440 C-",
+        "coreq": ""
+      },
+      "DGM 6880": {
+        "prereqData": "DGM 6461 C- \r\nOR DGM 6440 C-",
+        "coreq": ""
+      },
+      "DGM 6882": {
+        "prereqData": "DGM 6540 C-",
+        "coreq": ""
+      },
+      "DGM 6980": {
+        "prereqData": "DGM 6307 C-",
+        "coreq": ""
+      },
+      "DGM 7980": {
+        "prereqData": "DGM 6440 C- \r\nOR DGM 6461 C-",
+        "coreq": ""
+      },
+      "ECN 2350": {
+        "prereqData": "ECN 1200 D- \r\nOR ECN 1050 D- \r\nOR ECN 3118 D-",
+        "coreq": ""
+      },
+      "EDU 1031": {
+        "prereqData": "EDU 1101 D-",
+        "coreq": ""
+      },
+      "EDU 2004": {
+        "prereqData": "EDU 1101 D-",
+        "coreq": ""
+      },
+      "EDU 3405": {
+        "prereqData": "EDU 2004 D-",
+        "coreq": ""
+      },
+      "EDU 3414": {
+        "prereqData": "EDU 2004 D-",
+        "coreq": ""
+      },
+      "EDU 3415": {
+        "prereqData": "EDU 3400 D- \r\nAND EDU 3405 D-",
+        "coreq": ""
+      },
+      "EDU 6054": {
+        "prereqData": "EDU 6050 C-",
+        "coreq": ""
+      },
+      "EDU 6064": {
+        "prereqData": "EDU 6104 C- \r\nAND EDU 6107 C-",
+        "coreq": ""
+      },
+      "EDU 6086": {
+        "prereqData": "EDU 6104 C- \r\nAND EDU 6107 C-",
+        "coreq": ""
+      },
+      "EDU 6122": {
+        "prereqData": "EDU 6104 C- \r\nAND EDU 6107 C-",
+        "coreq": ""
+      },
+      "EDU 6124": {
+        "prereqData": "EDU 6104 C- \r\nAND EDU 6107 C-",
+        "coreq": ""
+      },
+      "EDU 6127": {
+        "prereqData": "EDU 6104 C- \r\nAND EDU 6107 C-",
+        "coreq": ""
+      },
+      "EDU 6129": {
+        "prereqData": "EDU 6104 C- \r\nAND EDU 6107 C-",
+        "coreq": ""
+      },
+      "EDU 6130": {
+        "prereqData": "EDU 6104 C- \r\nAND EDU 6107 C-",
+        "coreq": ""
+      },
+      "EDU 6154": {
+        "prereqData": "EDU 6104 C- \r\nAND EDU 6107 C-",
+        "coreq": ""
+      },
+      "EDU 6155": {
+        "prereqData": "EDU 6104 C- \r\nAND EDU 6107 C-",
+        "coreq": ""
+      },
+      "EDU 6162": {
+        "prereqData": "EDU 6104 C- \r\nAND EDU 6107 C-",
+        "coreq": ""
+      },
+      "EDU 6172": {
+        "prereqData": "EDU 6170 C-",
+        "coreq": ""
+      },
+      "EDU 6174": {
+        "prereqData": "EDU 6172 C-",
+        "coreq": ""
+      },
+      "EDU 6201": {
+        "prereqData": "EDU 6050 C-",
+        "coreq": ""
+      },
+      "EDU 6202": {
+        "prereqData": "EDU 6051 C-",
+        "coreq": ""
+      },
+      "EDU 6203": {
+        "prereqData": "EDU 6051 C-",
+        "coreq": ""
+      },
+      "EDU 6221": {
+        "prereqData": "EDU 6050 C-",
+        "coreq": ""
+      },
+      "EDU 6308": {
+        "prereqData": "EDU 6302 C-",
+        "coreq": ""
+      },
+      "EDU 6319": {
+        "prereqData": "EDU 6050 C-",
+        "coreq": ""
+      },
+      "EDU 6321": {
+        "prereqData": "EDU 6051 C- \r\nAND EDU 6319 C-",
+        "coreq": ""
+      },
+      "EDU 6322": {
+        "prereqData": "EDU 6051 C-",
+        "coreq": ""
+      },
+      "EDU 6323": {
+        "prereqData": "EDU 6051 C-",
+        "coreq": ""
+      },
+      "EDU 6324": {
+        "prereqData": "EDU 6051 C-",
+        "coreq": ""
+      },
+      "EDU 6328": {
+        "prereqData": "EDU 6050 C-",
+        "coreq": ""
+      },
+      "EDU 6329": {
+        "prereqData": "EDU 6050 C- \r\nAND EDU 6321 C-",
+        "coreq": ""
+      },
+      "EDU 6330": {
+        "prereqData": "EDU 6050 C-",
+        "coreq": ""
+      },
+      "EDU 6331": {
+        "prereqData": "EDU 6050 C-",
+        "coreq": ""
+      },
+      "EDU 6332": {
+        "prereqData": "EDU 6050 C-",
+        "coreq": ""
+      },
+      "EDU 6342": {
+        "prereqData": "EDU 6341 C-",
+        "coreq": ""
+      },
+      "EDU 6447": {
+        "prereqData": "EDU 6051 C-",
+        "coreq": ""
+      },
+      "EDU 6465": {
+        "prereqData": "EDU 6050 C-",
+        "coreq": ""
+      },
+      "EDU 6520": {
+        "prereqData": "EDU 6050 C-",
+        "coreq": ""
+      },
+      "EDU 6641": {
+        "prereqData": "EDU 6640 C-",
+        "coreq": ""
+      },
+      "EDU 6642": {
+        "prereqData": "EDU 6641 C-",
+        "coreq": ""
+      },
+      "EDU 6657": {
+        "prereqData": "EDU 6656 C-",
+        "coreq": ""
+      },
+      "EDU 6866": {
+        "prereqData": "EDU 6104 C-",
+        "coreq": ""
+      },
+      "EDU 6980": {
+        "prereqData": "EDU 6183 C-",
+        "coreq": ""
+      },
+      "EDU 7202": {
+        "prereqData": "EDU 7209 C-",
+        "coreq": ""
+      },
+      "EDU 7204": {
+        "prereqData": "EDU 7209 C-",
+        "coreq": ""
+      },
+      "EDU 7205": {
+        "prereqData": "EDU 7208 C-",
+        "coreq": ""
+      },
+      "EDU 7210": {
+        "prereqData": "EDU 7209 C-",
+        "coreq": ""
+      },
+      "EDU 7214": {
+        "prereqData": "EDU 7209 C-",
+        "coreq": ""
+      },
+      "EDU 7215": {
+        "prereqData": "EDU 7205 C-",
+        "coreq": ""
+      },
+      "EDU 7280": {
+        "prereqData": "EDU 7202 C- \r\nAND EDU 7209 C- \r\nAND EDU 7210 C- \r\nAND EDU 7214 C-",
+        "coreq": ""
+      },
+      "EDU 7281": {
+        "prereqData": "EDU 7280 C-",
+        "coreq": ""
+      },
+      "EDU 7282": {
+        "prereqData": "EDU 7205 C- \r\nOR EDU 7208 C- \r\nOR EDU 7281 C-",
+        "coreq": ""
+      },
+      "EDU 7283": {
+        "prereqData": "EDU 7205 C- \r\nOR EDU 7208 C- \r\nOR EDU 7281 C-",
+        "coreq": ""
+      },
+      "EDU 8791": {
+        "prereqData": "EDU 8790 C-",
+        "coreq": ""
+      },
+      "EDU 8792": {
+        "prereqData": "EDU 8791 C-",
+        "coreq": ""
+      },
+      "EDU 8796": {
+        "prereqData": "EDU 7280 C- \r\nAND EDU 7281 C- \r\nAND EDU 7283 C-",
+        "coreq": ""
+      },
+      "EDU 8797": {
+        "prereqData": "EDU 8796 C-",
+        "coreq": ""
+      },
+      "EDU 8798": {
+        "prereqData": "EDU 8797 C-",
+        "coreq": ""
+      },
+      "EDU 8799": {
+        "prereqData": "EDU 8798 C-",
+        "coreq": ""
+      },
+      "EET 2000": {
+        "prereqData": "MTH 2105 D- \r\nAND PHY 2200 D- \r\nAND PHY 2201 D-",
+        "coreq": "EET 2001"
+      },
+      "EET 2001": {
+        "prereqData": "MTH 2105 D- \r\nAND PHY 2200 D- \r\nAND PHY 2201 D-",
+        "coreq": "EET 2000"
+      },
+      "EET 2100": {
+        "prereqData": "EET 2000 D- \r\nAND EET 2001 D- \r\nAND GET 1150 D- \r\nAND GET 2100 D-",
+        "coreq": "EET 2101"
+      },
+      "EET 2101": {
+        "prereqData": "EET 2000 D- \r\nAND EET 2001 D- \r\nAND GET 1150 D- \r\nAND GET 2100 D-",
+        "coreq": "EET 2100"
+      },
+      "EET 3100": {
+        "prereqData": "EET 2100 D- \r\nAND EET 2101 D-",
+        "coreq": "EET 3101"
+      },
+      "EET 3101": {
+        "prereqData": "EET 2100 D- \r\nAND EET 2101 D-",
+        "coreq": "EET 3100"
+      },
+      "EET 3200": {
+        "prereqData": "EET 3100 D- \r\nAND EET 3101 D-",
+        "coreq": "EET 3201"
+      },
+      "EET 3201": {
+        "prereqData": "EET 3100 D- \r\nAND EET 3101 D-",
+        "coreq": "EET 3200"
+      },
+      "EET 3300": {
+        "prereqData": "EET 2100 D- \r\nAND EET 2101 D-",
+        "coreq": "EET 3301"
+      },
+      "EET 3301": {
+        "prereqData": "EET 2100 D- \r\nAND EET 2101 D-",
+        "coreq": "EET 3300"
+      },
+      "EET 3400": {
+        "prereqData": "EET 3300 D- \r\nAND EET 3301 D-",
+        "coreq": "EET 3401"
+      },
+      "EET 3401": {
+        "prereqData": "EET 3300 D- \r\nAND EET 3301 D-",
+        "coreq": "EET 3400"
+      },
+      "EET 3750": {
+        "prereqData": "EET 2100 D- \r\nAND EET 2101 D- \r\nAND MTH 3200 D-",
+        "coreq": ""
+      },
+      "EET 3800": {
+        "prereqData": "EET 3750 D-",
+        "coreq": ""
+      },
+      "EET 4100": {
+        "prereqData": "EET 3100 D- \r\nAND EET 3101 D- \r\nAND EET 3750 D-",
+        "coreq": ""
+      },
+      "EET 4110": {
+        "prereqData": "EET 2100 D- \r\nAND EET 2101 D-",
+        "coreq": ""
+      },
+      "EET 4120": {
+        "prereqData": "EET 3750 D-",
+        "coreq": ""
+      },
+      "EET 4130": {
+        "prereqData": "EET 3750 D- \r\nAND EET 4110 D-",
+        "coreq": ""
+      },
+      "EET 4140": {
+        "prereqData": "EET 3750 D- \r\nAND EET 4110 D-",
+        "coreq": ""
+      },
+      "ENG 1103": {
+        "prereqData": "",
+        "coreq": "ENG 1104"
+      },
+      "ENG 1104": {
+        "prereqData": "",
+        "coreq": "ENG 1103"
+      },
+      "ENG 1105": {
+        "prereqData": "",
+        "coreq": "ENG 1106"
+      },
+      "ENG 1106": {
+        "prereqData": "",
+        "coreq": "ENG 1105"
+      },
+      "ENG 1107": {
+        "prereqData": "ENG 1103 C \r\nOR ENG 1105 C",
+        "coreq": "ENG 1108"
+      },
+      "ENG 1108": {
+        "prereqData": "ENG 1104 C \r\nOR ENG 1106 C",
+        "coreq": "ENG 1107"
+      },
+      "ENG 2105": {
+        "prereqData": "ENG 1107 C",
+        "coreq": "ENG 2106"
+      },
+      "ENG 2106": {
+        "prereqData": "",
+        "coreq": "ENG 2105"
+      },
+      "ENG 2230": {
+        "prereqData": "ENG 1103 C \r\nOR ENG 1105 C",
+        "coreq": ""
+      },
+      "ENG 2231": {
+        "prereqData": "ENG 2230 D-",
+        "coreq": ""
+      },
+      "ENG 2450": {
+        "prereqData": "ENG 1103 C \r\nOR ENG 1105 C",
+        "coreq": ""
+      },
+      "ENG 2451": {
+        "prereqData": "ENG 2450 D-",
+        "coreq": ""
+      },
+      "ENG 3105": {
+        "prereqData": "( ENG 1103 C \r\nAND ENG 1104 S) \r\nOR ( ENG 1105 C \r\nAND ENG 1106 S)",
+        "coreq": "ENG 3106"
+      },
+      "ENG 3106": {
+        "prereqData": "",
+        "coreq": "ENG 3105"
+      },
+      "ENG 3107": {
+        "prereqData": "ENG 1107 C \r\nAND ENG 1108 S",
+        "coreq": "ENG 3108"
+      },
+      "ENG 3108": {
+        "prereqData": "",
+        "coreq": "ENG 3107"
+      },
+      "ENG 3210": {
+        "prereqData": "ENG 1107 D-",
+        "coreq": ""
+      },
+      "ENG 3220": {
+        "prereqData": "ENG 1107 D-",
+        "coreq": ""
+      },
+      "ENG 3230": {
+        "prereqData": "ENG 1107 D-",
+        "coreq": ""
+      },
+      "ENG 3240": {
+        "prereqData": "ENG 1107 D-",
+        "coreq": ""
+      },
+      "ENG 3260": {
+        "prereqData": "ENG 1107 D-",
+        "coreq": ""
+      },
+      "ENG 3300": {
+        "prereqData": "ENG 1103 D- \r\nOR ENG 1105 D-",
+        "coreq": ""
+      },
+      "ENG 3310": {
+        "prereqData": "ENG 1103 D- \r\nOR ENG 1105 D-",
+        "coreq": ""
+      },
+      "ENG 3440": {
+        "prereqData": "ENG 2231 D- \r\nOR ENG 2451 D-",
+        "coreq": ""
+      },
+      "ENG 4210": {
+        "prereqData": "ENG 3105 D- \r\nOR ENG 3107 D-",
+        "coreq": ""
+      },
+      "ENG 4455": {
+        "prereqData": "ENG 1107 D-",
+        "coreq": ""
+      },
+      "ESC 2100": {
+        "prereqData": "ESC 1050 D- \r\nOR ESC 1100 D- \r\nOR ESC 1150 D- \r\nOR ESC 1200 D-",
+        "coreq": ""
+      },
+      "ESC 2200": {
+        "prereqData": "ESC 1050 D- \r\nOR ESC 1100 D- \r\nOR ESC 1150 D- \r\nOR ESC 1200 D-",
+        "coreq": ""
+      },
+      "ESC 3100": {
+        "prereqData": "ESC 1050 D- \r\nOR ESC 1100 D- \r\nOR ESC 1150 D- \r\nOR ESC 1200 D-",
+        "coreq": ""
+      },
+      "ESC 3200": {
+        "prereqData": "BIO 1200 D- \r\nAND CHM 1200 D- \r\nAND ESC 1200 D-",
+        "coreq": ""
+      },
+      "ESC 3210": {
+        "prereqData": "BIO 1200 D- \r\nAND CHM 1200 D- \r\nAND ( ESC 1150 D- \r\nOR ESC 1200 D-)",
+        "coreq": ""
+      },
+      "ESC 3220": {
+        "prereqData": "BIO 1200 D- \r\nAND CHM 1200 D- \r\nAND ( ESC 1050 D- \r\nOR ESC 1100 D-)",
+        "coreq": ""
+      },
+      "ESC 3230": {
+        "prereqData": "BIO 1200 D- \r\nAND CHM 1200 D- \r\nAND ( ESC 1050 D- \r\nOR ESC 1100 D-)",
+        "coreq": ""
+      },
+      "ESC 3240": {
+        "prereqData": "BIO 1200 D- \r\nAND CHM 1200 D-",
+        "coreq": ""
+      },
+      "ESC 3250": {
+        "prereqData": "BIO 1200 D- \r\nAND CHM 1200 D- \r\nAND ( ESC 1050 D- \r\nOR ESC 1100 D- \r\nOR ESC 1200 D-)",
+        "coreq": ""
+      },
+      "ESC 4850": {
+        "prereqData": "ESC 3200 D- \r\nOR ESC 3210 D- \r\nOR ESC 3220 D- \r\nOR ESC 3230 D- \r\nOR ESC 3250 D-",
+        "coreq": ""
+      },
+      "ETC 5211": {
+        "prereqData": "ETC 3343 D-",
+        "coreq": ""
+      },
+      "ETC 5217": {
+        "prereqData": "ETC 5211 C-",
+        "coreq": ""
+      },
+      "FIN 2105": {
+        "prereqData": "ACC 2100 D- \r\nAND ( ECN 1200 D- \r\nOR ECN 1050 D-)",
+        "coreq": ""
+      },
+      "FIN 3310": {
+        "prereqData": "FIN 2105 D-",
+        "coreq": ""
+      },
+      "FIN 3330": {
+        "prereqData": "FIN 2105 D-",
+        "coreq": ""
+      },
+      "FIN 3340": {
+        "prereqData": "FIN 3310 D-",
+        "coreq": ""
+      },
+      "FIN 4220": {
+        "prereqData": "FIN 2105 D-",
+        "coreq": ""
+      },
+      "FIN 4230": {
+        "prereqData": "FIN 3310 D-",
+        "coreq": ""
+      },
+      "FIN 4240": {
+        "prereqData": "FIN 3330 D- \r\nAND FIN 3340 D-",
+        "coreq": ""
+      },
+      "FIN 4250": {
+        "prereqData": "FIN 3310 D-",
+        "coreq": ""
+      },
+      "GET 2100": {
+        "prereqData": "( MTH 2100 D- \r\nOR MTH 2105 D- \r\nOR MTH 2110 D- \r\nOR MTH 2400 D-) \r\nAND GET 1100 D-",
+        "coreq": ""
+      },
+      "GET 2200": {
+        "prereqData": "MTH 2100 D- \r\nOR MTH 2105 D- \r\nOR MTH 2110 D-",
+        "coreq": ""
+      },
+      "GET 4840": {
+        "prereqData": "GET 2200 D- \r\nAND ENG 3105 C \r\nAND ENG 3106 S",
+        "coreq": ""
+      },
+      "GET 4850": {
+        "prereqData": "GET 4840 D-",
+        "coreq": ""
+      },
+      "GIS 5102": {
+        "prereqData": "GIS 5101 C-",
+        "coreq": ""
+      },
+      "GIS 5201": {
+        "prereqData": "GIS 5102 C-",
+        "coreq": ""
+      },
+      "GIS 6320": {
+        "prereqData": "GIS 5102 C- \r\nAND GIS 5201 C-",
+        "coreq": ""
+      },
+      "GIS 6340": {
+        "prereqData": "GIS 5101 C-",
+        "coreq": ""
+      },
+      "GIS 6350": {
+        "prereqData": "GIS 5101 C-",
+        "coreq": ""
+      },
+      "GIS 6360": {
+        "prereqData": "GIS 5101 C- \r\nAND GIS 5102 C-",
+        "coreq": ""
+      },
+      "GIS 6370": {
+        "prereqData": "GIS 5101 C-",
+        "coreq": ""
+      },
+      "GIS 6380": {
+        "prereqData": "GIS 5101 C-",
+        "coreq": ""
+      },
+      "GIS 6385": {
+        "prereqData": "GIS 5101 C- \r\nAND GIS 5102 C-",
+        "coreq": ""
+      },
+      "GIS 6390": {
+        "prereqData": "GIS 5101 C- \r\nAND GIS 5102 C-",
+        "coreq": ""
+      },
+      "GIS 6391": {
+        "prereqData": "GIS 5101 C- \r\nAND GIS 5102 C-",
+        "coreq": ""
+      },
+      "GIS 6395": {
+        "prereqData": "GIS 5201 C-",
+        "coreq": ""
+      },
+      "GIS 6396": {
+        "prereqData": "GIS 5101 C- \r\nAND GIS 5102 C-",
+        "coreq": ""
+      },
+      "GIS 6980": {
+        "prereqData": "GIS 5101 C- \r\nAND GIS 5102 C- \r\nAND GIS 5201 C- \r\nAND RMS 5105 C-",
+        "coreq": ""
+      },
+      "GST 6501": {
+        "prereqData": "GST 6100 C-",
+        "coreq": ""
+      },
+      "GST 6502": {
+        "prereqData": "GST 6100 C-",
+        "coreq": ""
+      },
+      "GST 6503": {
+        "prereqData": "GST 6100 C-",
+        "coreq": ""
+      },
+      "GST 6504": {
+        "prereqData": "GST 6100 C-",
+        "coreq": ""
+      },
+      "GST 6505": {
+        "prereqData": "GST 6100 C-",
+        "coreq": ""
+      },
+      "GST 6506": {
+        "prereqData": "GST 6100 C-",
+        "coreq": ""
+      },
+      "GST 6600": {
+        "prereqData": "GST 6100 C-",
+        "coreq": ""
+      },
+      "GST 6920": {
+        "prereqData": "GST 6100 C- \r\nAND GST 6101 C- \r\nAND GST 6109 C- \r\nAND GST 6320 C- \r\nAND ( GST 6501 C- \r\nOR GST 6502 C- \r\nOR GST 6503 C- \r\nOR GST 6504 C- \r\nOR GST 6505 C- \r\nOR GST 6506 C-)",
+        "coreq": ""
+      },
+      "HLS 6035": {
+        "prereqData": "HLS 6030 C-",
+        "coreq": ""
+      },
+      "HLS 6110": {
+        "prereqData": "HLS 6100 C-",
+        "coreq": ""
+      },
+      "HLS 6130": {
+        "prereqData": "HLS 6120 C-",
+        "coreq": ""
+      },
+      "HLS 6140": {
+        "prereqData": "HLS 6110 C- \r\nAND HLS 6130 C-",
+        "coreq": ""
+      },
+      "HLS 7010": {
+        "prereqData": "HLS 7000 S",
+        "coreq": ""
+      },
+      "HLS 7020": {
+        "prereqData": "HLS 7010 S",
+        "coreq": ""
+      },
+      "HLS 7030": {
+        "prereqData": "HLS 7020 S",
+        "coreq": ""
+      },
+      "HLS 7040": {
+        "prereqData": "HLS 7030 S",
+        "coreq": ""
+      },
+      "HMG 2100": {
+        "prereqData": "HMG 1100 D- \r\nOR MGT 1100 D-",
+        "coreq": ""
+      },
+      "HMG 2110": {
+        "prereqData": "HMG 1100 D- \r\nOR MGT 1100 D-",
+        "coreq": ""
+      },
+      "HMG 3210": {
+        "prereqData": "HMG 1100 D- \r\nOR MGT 1100 D-",
+        "coreq": ""
+      },
+      "HMG 3220": {
+        "prereqData": "HMG 2100 D-",
+        "coreq": ""
+      },
+      "HMG 3225": {
+        "prereqData": "HMG 1100 D- \r\nOR MGT 1100 D-",
+        "coreq": ""
+      },
+      "HMG 4210": {
+        "prereqData": "HMG 3225 D- \r\nOR HSV 3300 D-",
+        "coreq": ""
+      },
+      "HMG 4850": {
+        "prereqData": "HMG 4210 D-",
+        "coreq": ""
+      },
+      "HMG 4994": {
+        "prereqData": "HMG 3220 D-",
+        "coreq": ""
+      },
+      "HRM 2320": {
+        "prereqData": "MGT 1100 D- \r\nOR HMG 1100 D-",
+        "coreq": ""
+      },
+      "HSC 3300": {
+        "prereqData": "MTH 2300 D- \r\nOR MTH 2310 D- \r\nOR MTH 3300 D-",
+        "coreq": ""
+      },
+      "HSC 3310": {
+        "prereqData": "BIO 1200 D- \r\nAND BIO 1201 D-",
+        "coreq": ""
+      },
+      "HSC 3320": {
+        "prereqData": "CHM 1200 D- \r\nAND CHM 1201 D-",
+        "coreq": ""
+      },
+      "HSC 4850": {
+        "prereqData": "HSC 3300 D-",
+        "coreq": ""
+      },
+      "HSV 2200": {
+        "prereqData": "HSV 1100 D- \r\nOR PSY 1100 D- \r\nOR ( PSY 1010 D- \r\nAND PSY 1210 D-) \r\nOR ( PSY 1010 D- \r\nAND PSY 1410 D-) \r\nOR ( PSY 1210 D- \r\nAND PSY 1410 D-)",
+        "coreq": ""
+      },
+      "HSV 2240": {
+        "prereqData": "HSV 1100 D- \r\nOR PSY 1100 D- \r\nOR SOC 1100 D- \r\nOR ( PSY 1010 D- \r\nAND PSY 1210 D-) \r\nOR ( PSY 1010 D- \r\nAND PSY 1410 D-) \r\nOR ( PSY 1210 D- \r\nAND PSY 1410 D-)",
+        "coreq": ""
+      },
+      "HSV 3200": {
+        "prereqData": "HSV 2200 D-",
+        "coreq": ""
+      },
+      "HSV 3220": {
+        "prereqData": "HSV 1100 D-",
+        "coreq": ""
+      },
+      "HSV 3300": {
+        "prereqData": "HSV 1100 D- \r\nOR PSY 1100 D- \r\nOR SOC 1100 D- \r\nOR ( PSY 1010 D- \r\nAND PSY 1210 D-) \r\nOR ( PSY 1010 D- \r\nAND PSY 1410 D-) \r\nOR ( PSY 1210 D- \r\nAND PSY 1410 D-)",
+        "coreq": ""
+      },
+      "HSV 3350": {
+        "prereqData": "HSV 1100 D- \r\nAND ( MTH 2300 D- \r\nOR MTH 2310 D- \r\nOR MTH 3300 D-)",
+        "coreq": ""
+      },
+      "HSV 3400": {
+        "prereqData": "HSV 3300 D-",
+        "coreq": ""
+      },
+      "HSV 4850": {
+        "prereqData": "HSV 3400 D-",
+        "coreq": ""
+      },
+      "HSV 6162": {
+        "prereqData": "HSV 6160 C-",
+        "coreq": ""
+      },
+      "HSV 6163": {
+        "prereqData": "HSV 6160 C-",
+        "coreq": ""
+      },
+      "HSV 6164": {
+        "prereqData": "HSV 6160 C-",
+        "coreq": ""
+      },
+      "HSV 6165": {
+        "prereqData": "HSV 6160 C-",
+        "coreq": ""
+      },
+      "HSV 6610": {
+        "prereqData": "11",
+        "coreq": ""
+      },
+      "HSV 6620": {
+        "prereqData": "HSV 6160 C-",
+        "coreq": ""
+      },
+      "HSV 6980": {
+        "prereqData": "HSV 6100 C- \r\nAND HSV 6110 C- \r\nAND HSV 6120 C- \r\nAND HSV 6630 C- \r\nAND HSV 6640 C- \r\nAND HSV 6160 C-",
+        "coreq": ""
+      },
+      "INT 6000": {
+        "prereqData": "",
+        "coreq": "CMN 6000"
+      },
+      "INT 6920": {
+        "prereqData": "COP 6940 C-",
+        "coreq": ""
+      },
+      "ITC 2100": {
+        "prereqData": "MTH 2100 D- \r\nOR MTH 2105 D- \r\nOR MTH 2110 D- \r\nOR MTH 2400 D-",
+        "coreq": ""
+      },
+      "ITC 2200": {
+        "prereqData": "ITC 1200 D- \r\nAND ITC 2000 D-",
+        "coreq": ""
+      },
+      "ITC 2300": {
+        "prereqData": "ITC 2000 D-",
+        "coreq": ""
+      },
+      "ITC 2430": {
+        "prereqData": "MGT 1100 D-",
+        "coreq": ""
+      },
+      "ITC 3100": {
+        "prereqData": "ITC 2100 D- \r\nOR GET 2100 D- \r\nOR CET 2200 D-",
+        "coreq": ""
+      },
+      "ITC 3150": {
+        "prereqData": "ITC 2300 D- \r\nAND ITC 2400 D-",
+        "coreq": ""
+      },
+      "ITC 3220": {
+        "prereqData": "ITC 2200 D-",
+        "coreq": ""
+      },
+      "ITC 3250": {
+        "prereqData": "ITC 1200 D-",
+        "coreq": ""
+      },
+      "ITC 3300": {
+        "prereqData": "ITC 2300 D-",
+        "coreq": ""
+      },
+      "ITC 3320": {
+        "prereqData": "ITC 2300 D-",
+        "coreq": ""
+      },
+      "ITC 3400": {
+        "prereqData": "ITC 2400 D-",
+        "coreq": ""
+      },
+      "ITC 4200": {
+        "prereqData": "ITC 2200 D-",
+        "coreq": ""
+      },
+      "ITC 4210": {
+        "prereqData": "ITC 3250 D-",
+        "coreq": ""
+      },
+      "ITC 4260": {
+        "prereqData": "ITC 3300 D-",
+        "coreq": ""
+      },
+      "ITC 4500": {
+        "prereqData": "ITC 2100 D- \r\nAND ITC 2200 D- \r\nAND ITC 2300 D- \r\nAND ITC 2400 D-",
+        "coreq": ""
+      },
+      "ITC 4600": {
+        "prereqData": "ITC 2200 D- \r\nAND ITC 2300 D-",
+        "coreq": ""
+      },
+      "ITC 4650": {
+        "prereqData": "ITC 4600 D-",
+        "coreq": ""
+      },
+      "ITC 4840": {
+        "prereqData": "ITC 4500 D-",
+        "coreq": ""
+      },
+      "ITC 4850": {
+        "prereqData": "ITC 4840 D-",
+        "coreq": ""
+      },
+      "ITC 6015": {
+        "prereqData": "ITC 6000 C-",
+        "coreq": ""
+      },
+      "ITC 6040": {
+        "prereqData": "ITC 6000 C- \r\nAND ITC 6010 C- \r\nAND ITC 6020 C- \r\nAND ITC 6035 C- \r\nAND ITC 6045 C- \r\nAND ITC 6300 C-\r\nAND ITC 6345 C-",
+        "coreq": ""
+      },
+      "ITC 6302": {
+        "prereqData": "ITC 6301 C-",
+        "coreq": ""
+      },
+      "ITC 6335": {
+        "prereqData": "ITC 6000 C-",
+        "coreq": ""
+      },
+      "ITC 6511": {
+        "prereqData": "ITC 6510 C-",
+        "coreq": ""
+      },
+      "ITC 6512": {
+        "prereqData": "ITC 6510 C-",
+        "coreq": ""
+      },
+      "LDR 3200": {
+        "prereqData": "LDR 1200 D- \r\nOR CMN 2210 D- \r\nOR HRM 2350 D- \r\nOR LDR 1203 D- \r\nOR LDR 1501 D- \r\nOR MGT 2100 D- \r\nOR MGT 2310 D-",
+        "coreq": ""
+      },
+      "LDR 3250": {
+        "prereqData": "LDR 1200 D- \r\nOR CMN 2210 D- \r\nOR HRM 2350 D- \r\nOR LDR 1203 D- \r\nOR LDR 1501 D- \r\nOR MGT 2100 D- \r\nOR MGT 2310 D-",
+        "coreq": ""
+      },
+      "LDR 3400": {
+        "prereqData": "( LDR 1200 D- \r\nOR CMN 2210 D- \r\nOR HRM 2350 D- \r\nOR LDR 1203 D- \r\nOR LDR 1501 D-) \r\nAND ( MTH 2300 D- \r\nOR MTH 2310 D- \r\nOR MTH 3300 D-)",
+        "coreq": ""
+      },
+      "LDR 4850": {
+        "prereqData": "LDR 3400 D-",
+        "coreq": ""
+      },
+      "LDR 6120": {
+        "prereqData": "LDR 6100 C-",
+        "coreq": ""
+      },
+      "LDR 6125": {
+        "prereqData": "LDR 6100 C-",
+        "coreq": ""
+      },
+      "LDR 6140": {
+        "prereqData": "LDR 6100 C- \r\nAND LDR 6120 C-",
+        "coreq": ""
+      },
+      "LDR 6150": {
+        "prereqData": "LDR 6100 C- \r\nAND LDR 6110 C-",
+        "coreq": ""
+      },
+      "LDR 7980": {
+        "prereqData": "LDR 6100 C- \r\nAND LDR 6120 C- \r\nAND LDR 6140 C-",
+        "coreq": ""
+      },
+      "LNG 6507": {
+        "prereqData": "LNG 6506 C- \r\nOR LNG 0906 D-",
+        "coreq": ""
+      },
+      "LWP 6102": {
+        "prereqData": "LWP 6100 C- \r\nAND LWP 6101 C-",
+        "coreq": ""
+      },
+      "LWP 6103": {
+        "prereqData": "LWP 6100 C- \r\nAND LWP 6101 C-",
+        "coreq": ""
+      },
+      "LWP 6108": {
+        "prereqData": "LWP 6102 C- \r\nAND LWP 6103 C-",
+        "coreq": ""
+      },
+      "LWP 6110": {
+        "prereqData": "LWP 6108 C-",
+        "coreq": ""
+      },
+      "LWP 6111": {
+        "prereqData": "LWP 6200 C-",
+        "coreq": ""
+      },
+      "LWP 6112": {
+        "prereqData": "LWP 6111 C-",
+        "coreq": ""
+      },
+      "LWP 6113": {
+        "prereqData": "LWP 6110 C-",
+        "coreq": ""
+      },
+      "LWP 6114": {
+        "prereqData": "LWP 6113 C-",
+        "coreq": ""
+      },
+      "LWP 6116": {
+        "prereqData": "LWP 6114 C-",
+        "coreq": ""
+      },
+      "LWP 6119": {
+        "prereqData": "LWP 6118 C-",
+        "coreq": ""
+      },
+      "LWP 6121": {
+        "prereqData": "LWP 6120 C-",
+        "coreq": ""
+      },
+      "LWP 6122": {
+        "prereqData": "LWP 6121 C-",
+        "coreq": ""
+      },
+      "LWP 6123": {
+        "prereqData": "LWP 6122 C-",
+        "coreq": ""
+      },
+      "LWP 6200": {
+        "prereqData": "LWP 6102 C- \r\nAND LWP 6103 C-",
+        "coreq": ""
+      },
+      "LWP 6401": {
+        "prereqData": "LWP 6121 C-",
+        "coreq": ""
+      },
+      "LWP 6402": {
+        "prereqData": "LWP 6401 C-",
+        "coreq": ""
+      },
+      "LWP 6403": {
+        "prereqData": "LWP 6402 C-",
+        "coreq": ""
+      },
+      "LWP 6405": {
+        "prereqData": "LWP 6403 C-",
+        "coreq": ""
+      },
+      "LWP 6411": {
+        "prereqData": "LWP 6410 C-",
+        "coreq": ""
+      },
+      "LWP 6413": {
+        "prereqData": "LWP 6412 C-",
+        "coreq": ""
+      },
+      "LWP 6421": {
+        "prereqData": "LWP 6420 C-",
+        "coreq": ""
+      },
+      "LWP 6422": {
+        "prereqData": "LWP 6421 C-",
+        "coreq": ""
+      },
+      "LWP 6424": {
+        "prereqData": "LWP 6423 C-",
+        "coreq": ""
+      },
+      "LWP 6425": {
+        "prereqData": "LWP 6424 C-",
+        "coreq": ""
+      },
+      "LWP 6451": {
+        "prereqData": "LWP 6450 C-",
+        "coreq": ""
+      },
+      "LWP 6452": {
+        "prereqData": "LWP 6451 C-",
+        "coreq": ""
+      },
+      "LWP 6501": {
+        "prereqData": "LWP 6500 C-",
+        "coreq": ""
+      },
+      "LWP 6502": {
+        "prereqData": "LWP 6501 C-",
+        "coreq": ""
+      },
+      "LWP 6503": {
+        "prereqData": "LWP 6502 C-",
+        "coreq": ""
+      },
+      "LWP 7990": {
+        "prereqData": "LWP 6102 C- \r\nAND LWP 6103 C-",
+        "coreq": ""
+      },
+      "MET 2000": {
+        "prereqData": "GET 1150 D-",
+        "coreq": ""
+      },
+      "MET 2020": {
+        "prereqData": "MET 2000 D-",
+        "coreq": ""
+      },
+      "MET 2040": {
+        "prereqData": "MET 2020 D- \r\nAND (( CHM 1100 D- \r\nAND CHM 1101 D- ) \r\nOR ( BIO 1100 D- \r\nAND BIO 1101 D- ))",
+        "coreq": ""
+      },
+      "MET 2100": {
+        "prereqData": "PHY 2100 D- \r\nAND PHY 2101 D- \r\nAND ( MTH 2100 D- \r\nOR MTH 2105 D- \r\nOR MTH 2110 D-)",
+        "coreq": ""
+      },
+      "MET 2200": {
+        "prereqData": "MET 2100 D- \r\nAND MTH 2105 D- \r\nAND PHY 2200 D- \r\nAND PHY 2201 D- \r\nAND GET 2100 D-",
+        "coreq": ""
+      },
+      "MET 3100": {
+        "prereqData": "MET 2200 D-",
+        "coreq": "MET 3101"
+      },
+      "MET 3101": {
+        "prereqData": "MET 2200 D-",
+        "coreq": "MET 3100"
+      },
+      "MET 3200": {
+        "prereqData": "MET 2200 D- \r\nAND ( MTH 2105 D- \r\nOR MTH 2110 D-)",
+        "coreq": "MET 3201"
+      },
+      "MET 3201": {
+        "prereqData": "MET 2200 D-",
+        "coreq": "MET 3200"
+      },
+      "MET 3300": {
+        "prereqData": "MET 3100 D- \r\nAND MET 3101 D- \r\nAND MET 2040 D-",
+        "coreq": "MET 3301"
+      },
+      "MET 3301": {
+        "prereqData": "MET 3100 D- \r\nAND MET 3101 D- \r\nAND MET 2040 D-",
+        "coreq": "MET 3300"
+      },
+      "MET 3400": {
+        "prereqData": "MET 3200 D- \r\nAND MET 3201 D-",
+        "coreq": "MET 3401"
+      },
+      "MET 3401": {
+        "prereqData": "MET 3200 D- \r\nAND MET 3201 D-",
+        "coreq": "MET 3400"
+      },
+      "MET 3500": {
+        "prereqData": "EET 2000 D- \r\nAND EET 2001 D- \r\nAND MET 3400 D- \r\nAND MET 3401 D-",
+        "coreq": "MET 3501"
+      },
+      "MET 3501": {
+        "prereqData": "MET 3400 D- \r\nAND MET 3401 D-",
+        "coreq": "MET 3500"
+      },
+      "MET 3600": {
+        "prereqData": "MET 3400 D- \r\nAND MET 3401 D-",
+        "coreq": "MET 3601"
+      },
+      "MET 3601": {
+        "prereqData": "MET 3400 D- \r\nAND MET 3401 D-",
+        "coreq": "MET 3600"
+      },
+      "MET 4100": {
+        "prereqData": "MET 3300 D- \r\nAND MET 3301 D- \r\nAND MET 3500 D- \r\nAND MET 3501 D- \r\nAND MET 3600 D- \r\nAND MET 3601 D-",
+        "coreq": ""
+      },
+      "MET 4200": {
+        "prereqData": "MET 3300 D- \r\nAND MET 3301 D- \r\nAND MET 3500 D- \r\nAND MET 3501 D- \r\nAND MET 3600 D- \r\nAND MET 3601 D-",
+        "coreq": ""
+      },
+      "MET 4300": {
+        "prereqData": "MET 4100 D- \r\nOR MET 4200 D-",
+        "coreq": ""
+      },
+      "MET 4310": {
+        "prereqData": "MET 4100 D- \r\nOR MET 4200 D-",
+        "coreq": ""
+      },
+      "MET 4320": {
+        "prereqData": "MET 4100 D- \r\nOR MET 4200 D-",
+        "coreq": ""
+      },
+      "MET 4330": {
+        "prereqData": "MET 4100 D- \r\nOR MET 4200 D-",
+        "coreq": ""
+      },
+      "MET 4340": {
+        "prereqData": "MET 4100 D- \r\nOR MET 4200 D-",
+        "coreq": ""
+      },
+      "MET 4350": {
+        "prereqData": "MET 4100 D- \r\nOR MET 4200 D-",
+        "coreq": ""
+      },
+      "MET 4360": {
+        "prereqData": "MET 4100 D- \r\nOR MET 4200 D-",
+        "coreq": ""
+      },
+      "MET 4410": {
+        "prereqData": "MET 4100 D- \r\nOR MET 4200 D-",
+        "coreq": ""
+      },
+      "MET 4420": {
+        "prereqData": "MET 4100 D- \r\nOR MET 4200 D-",
+        "coreq": ""
+      },
+      "MET 4430": {
+        "prereqData": "MET 4100 D- \r\nOR MET 4200 D-",
+        "coreq": ""
+      },
+      "MET 4440": {
+        "prereqData": "MET 4100 D- \r\nOR MET 4200 D-",
+        "coreq": ""
+      },
+      "MET 4450": {
+        "prereqData": "MET 4100 D- \r\nOR MET 4200 D-",
+        "coreq": ""
+      },
+      "MGT 2100": {
+        "prereqData": "MGT 1100 D- \r\nOR CMN 1100 D- \r\nOR CMN 1103 D- \r\nOR CMN 2210 D- \r\nOR HMG 1100 D-",
+        "coreq": ""
+      },
+      "MGT 2210": {
+        "prereqData": "ITC 1000 D- \r\nOR ITC 2016 D-",
+        "coreq": ""
+      },
+      "MGT 2220": {
+        "prereqData": "MGT 1100 D-",
+        "coreq": ""
+      },
+      "MGT 2310": {
+        "prereqData": "HMG 1100 D- \r\nOR MGT 1100 D-",
+        "coreq": ""
+      },
+      "MGT 2820": {
+        "prereqData": "MGT 1100 D-",
+        "coreq": ""
+      },
+      "MGT 3220": {
+        "prereqData": "MGT 2100 D- \r\nOR MGT 2310 D- \r\nOR CMN 3050 D- \r\nOR LDR 1501 D-",
+        "coreq": ""
+      },
+      "MGT 3444": {
+        "prereqData": "MGT 2220 D- \r\nOR MIS 3702 D-",
+        "coreq": ""
+      },
+      "MGT 3451": {
+        "prereqData": "MGT 2220 D- \r\nOR MIS 3702 D-",
+        "coreq": ""
+      },
+      "MGT 4210": {
+        "prereqData": "MGT 2100 D- \r\nOR MGT 2310 D- \r\nOR CMN 3050 D- \r\nOR LDR 1501 D-",
+        "coreq": ""
+      },
+      "MGT 4220": {
+        "prereqData": "MGT 4210 D-",
+        "coreq": ""
+      },
+      "MGT 4230": {
+        "prereqData": "MGT 4210 D- \r\nAND ENG 3107 D- \r\nAND ENG 3108 S",
+        "coreq": ""
+      },
+      "MGT 4850": {
+        "prereqData": "MGT 2310 D- \r\nAND ENG 3107 C \r\nAND ENG 3108 S",
+        "coreq": ""
+      },
+      "MKT 2100": {
+        "prereqData": "MGT 1100 D- \r\nOR CMN 1100 D- \r\nOR CMN 1103 D- \r\nOR CMN 2210 D- \r\nOR HMG 1100 D-",
+        "coreq": ""
+      },
+      "MKT 2220": {
+        "prereqData": "MKT 2100 D-",
+        "coreq": ""
+      },
+      "MTH 0103": {
+        "prereqData": "MTH 0102 C-",
+        "coreq": ""
+      },
+      "MTH 2100": {
+        "prereqData": "MTH 1200 C-",
+        "coreq": ""
+      },
+      "MTH 2105": {
+        "prereqData": "MTH 2100 D-",
+        "coreq": ""
+      },
+      "MTH 2110": {
+        "prereqData": "MTH 2105 D-",
+        "coreq": ""
+      },
+      "MTH 2300": {
+        "prereqData": "MTH 1100 D- \r\nOR MTH 1200 D- \r\nOR MTH 2100 D-",
+        "coreq": ""
+      },
+      "MTH 2310": {
+        "prereqData": "MTH 1100 D- \r\nOR MTH 1200 D- \r\nOR MTH 2100 D-",
+        "coreq": ""
+      },
+      "MTH 2400": {
+        "prereqData": "MTH 1100 D- \r\nOR MTH 1200 D- \r\nOR MTH 2100 D-",
+        "coreq": ""
+      },
+      "MTH 3200": {
+        "prereqData": "MTH 2105 D-",
+        "coreq": ""
+      },
+      "MTH 3300": {
+        "prereqData": "MTH 2100 D- \r\nOR MTH 2105 D- \r\nOR MTH 2110 D-",
+        "coreq": ""
+      },
+      "NPM 6162": {
+        "prereqData": "NPM 6160 C-",
+        "coreq": ""
+      },
+      "NPM 6164": {
+        "prereqData": "NPM 6160 C-",
+        "coreq": ""
+      },
+      "NPM 6165": {
+        "prereqData": "NPM 6160 C-",
+        "coreq": ""
+      },
+      "NPM 6166": {
+        "prereqData": "NPM 6160 C-",
+        "coreq": ""
+      },
+      "NPM 6168": {
+        "prereqData": "NPM 6162 C- \r\nAND NPM 6164 C- \r\nAND NPM 6165 C- \r\nAND NPM 6166 C-",
+        "coreq": ""
+      },
+      "NPM 6980": {
+        "prereqData": "NPM 6110 C- \r\nAND NPM 6120 C- \r\nAND NPM 6125 C- \r\nAND NPM 6130 C- \r\nAND NPM 6140 C- \r\nAND NPM 6150 C-",
+        "coreq": ""
+      },
+      "NTR 6110": {
+        "prereqData": "NTR 6100 C-",
+        "coreq": ""
+      },
+      "NTR 6866": {
+        "prereqData": "NTR 6112 C-",
+        "coreq": ""
+      },
+      "NTR 7132": {
+        "prereqData": "NTR 7130 C-",
+        "coreq": ""
+      },
+      "OCM 6110": {
+        "prereqData": "OCM 6100 C-",
+        "coreq": ""
+      },
+      "OCM 6120": {
+        "prereqData": "OCM 6100 C-",
+        "coreq": ""
+      },
+      "OCM 6130": {
+        "prereqData": "OCM 6100 C-",
+        "coreq": ""
+      },
+      "OCM 6140": {
+        "prereqData": "OCM 6100 C-",
+        "coreq": ""
+      },
+      "OCM 7995": {
+        "prereqData": "OCM 6110 C- \r\nAND OCM 6120 C- \r\nAND OCM 6130 C- \r\nAND OCM 6140 C-",
+        "coreq": ""
+      },
+      "PBR 6110": {
+        "prereqData": "PBR 6100 C-",
+        "coreq": ""
+      },
+      "PBR 6120": {
+        "prereqData": "PBR 6100 C-",
+        "coreq": ""
+      },
+      "PBR 6130": {
+        "prereqData": "PBR 6710 C-",
+        "coreq": ""
+      },
+      "PBR 6140": {
+        "prereqData": "PBR 6130 C-",
+        "coreq": ""
+      },
+      "PBR 6205": {
+        "prereqData": "PBR 6100 C-",
+        "coreq": ""
+      },
+      "PBR 6225": {
+        "prereqData": "PBR 6100 C-",
+        "coreq": ""
+      },
+      "PBR 6710": {
+        "prereqData": "PBR 6100 C-",
+        "coreq": ""
+      },
+      "PBR 6940": {
+        "prereqData": "PBR 6100 C-",
+        "coreq": ""
+      },
+      "PBR 6983": {
+        "prereqData": "PBR 6100 C-",
+        "coreq": ""
+      },
+      "PHL 2120": {
+        "prereqData": "CMN 1100 D- \r\nOR CMN 1103 D- \r\nOR CMN 2210 D-",
+        "coreq": ""
+      },
+      "PHY 1200": {
+        "prereqData": "MTH 2100 D- \r\nOR MTH 2105 D- \r\nOR MTH 2110 D-",
+        "coreq": "PHY 1201"
+      },
+      "PHY 1201": {
+        "prereqData": "MTH 2100 D- \r\nOR MTH 2105 D- \r\nOR MTH 2110 D-",
+        "coreq": "PHY 1200"
+      },
+      "PHY 2200": {
+        "prereqData": "PHY 1200 D- \r\nAND PHY 1201 D-",
+        "coreq": "PHY 2201"
+      },
+      "PHY 2201": {
+        "prereqData": "PHY 1200 D- \r\nAND PHY 1201 D-",
+        "coreq": "PHY 2200"
+      },
+      "PJM 6005": {
+        "prereqData": "PJM 6000 C-",
+        "coreq": ""
+      },
+      "PJM 6015": {
+        "prereqData": "PJM 6000 C-",
+        "coreq": ""
+      },
+      "PJM 6025": {
+        "prereqData": "PJM 6000 C-",
+        "coreq": ""
+      },
+      "PJM 6125": {
+        "prereqData": "PJM 6000 C- \r\nAND PJM 6005 C- \r\nAND PJM 6015 C- \r\nAND PJM 6025 C- \r\nAND PJM 6135 C-",
+        "coreq": ""
+      },
+      "PJM 6135": {
+        "prereqData": "PJM 6000 C-",
+        "coreq": ""
+      },
+      "PJM 6140": {
+        "prereqData": "PJM 6000 C- \r\nAND PJM 6005 C- \r\nAND PJM 6015 C- \r\nAND PJM 6025 C- \r\nAND PJM 6135 C-",
+        "coreq": ""
+      },
+      "PJM 6145": {
+        "prereqData": "PJM 6000 C- \r\nAND PJM 6005 C- \r\nAND PJM 6015 C- \r\nAND PJM 6025 C- \r\nAND PJM 6135 C-",
+        "coreq": ""
+      },
+      "PJM 6205": {
+        "prereqData": "PJM 6000 C-",
+        "coreq": ""
+      },
+      "PJM 6210": {
+        "prereqData": "PJM 6000 C-",
+        "coreq": ""
+      },
+      "PJM 6215": {
+        "prereqData": "PJM 6000 C-",
+        "coreq": ""
+      },
+      "PJM 6220": {
+        "prereqData": "PJM 6000 C-",
+        "coreq": ""
+      },
+      "PJM 6705": {
+        "prereqData": "PJM 6000 C- \r\nAND PJM 6005 C- \r\nAND PJM 6015 C- \r\nAND PJM 6025 C- \r\nAND PJM 6135 C-",
+        "coreq": ""
+      },
+      "PJM 6710": {
+        "prereqData": "PJM 6005 C- \r\nAND PJM 6015 C- \r\nAND PJM 6025 C-",
+        "coreq": ""
+      },
+      "PJM 6725": {
+        "prereqData": "PJM 6710 C-",
+        "coreq": ""
+      },
+      "PJM 6735": {
+        "prereqData": "PJM 6710 C- \r\nAND PJM 6715 C- \r\nAND PJM 6720 C- \r\nAND PJM 6725 C- \r\nAND PJM 6730 C-",
+        "coreq": ""
+      },
+      "PJM 6810": {
+        "prereqData": "PJM 6000 C-",
+        "coreq": ""
+      },
+      "PJM 6825": {
+        "prereqData": "PJM 6810 C-\r\nOR PJM 6220",
+        "coreq": ""
+      },
+      "PJM 6910": {
+        "prereqData": "PJM 6000 C- \r\nAND PJM 6005 C- \r\nAND PJM 6015 C- \r\nAND PJM 6025 C- \r\nAND PJM 6135 C-",
+        "coreq": ""
+      },
+      "PMC 6212": {
+        "prereqData": "PJM 6000 C- \r\nOR ( BTC 6210 C- \r\nAND RGA 6100 C- \r\nAND ( RGA 6201 C- \r\nOR RGA 6202 C-))",
+        "coreq": ""
+      },
+      "POL 3126": {
+        "prereqData": "POL 1120 D-",
+        "coreq": ""
+      },
+      "POL 3135": {
+        "prereqData": "POL 1120 D-",
+        "coreq": ""
+      },
+      "POL 3140": {
+        "prereqData": "POL 1120 D-",
+        "coreq": ""
+      },
+      "POL 3210": {
+        "prereqData": "POL 1200 D-",
+        "coreq": ""
+      },
+      "POL 3220": {
+        "prereqData": "POL 1200 D-",
+        "coreq": ""
+      },
+      "POL 3310": {
+        "prereqData": "POL 1300 D-",
+        "coreq": ""
+      },
+      "POL 3320": {
+        "prereqData": "POL 1300 D-",
+        "coreq": ""
+      },
+      "POL 3330": {
+        "prereqData": "POL 1300 D-",
+        "coreq": ""
+      },
+      "POL 3400": {
+        "prereqData": "( MTH 2300 D- \r\nOR MTH 2310 D- \r\nOR MTH 3300 D-) \r\nAND POL 2430 D-",
+        "coreq": ""
+      },
+      "POL 4850": {
+        "prereqData": "POL 3400 D-",
+        "coreq": ""
+      },
+      "PSY 3200": {
+        "prereqData": "PSY 1100 D- \r\nOR SOC 1100 D- \r\nOR ( PSY 1010 D- \r\nAND PSY 1210 D-) \r\nOR ( PSY 1010 D- \r\nAND PSY 1410 D-) \r\nOR ( PSY 1210 D- \r\nAND PSY 1410 D-)",
+        "coreq": ""
+      },
+      "PSY 3210": {
+        "prereqData": "PSY 1100 D- \r\nOR ( PSY 1010 D- \r\nAND PSY 1210 D-) \r\nOR ( PSY 1010 D- \r\nAND PSY 1410 D-) \r\nOR ( PSY 1210 D- \r\nAND PSY 1410 D-)",
+        "coreq": ""
+      },
+      "PSY 3220": {
+        "prereqData": "PSY 1100 D- \r\nOR ( PSY 1010 D- \r\nAND PSY 1210 D-) \r\nOR ( PSY 1010 D- \r\nAND PSY 1410 D-) \r\nOR ( PSY 1210 D- \r\nAND PSY 1410 D-)",
+        "coreq": ""
+      },
+      "PSY 3230": {
+        "prereqData": "PSY 1100 D- \r\nOR ( PSY 1010 D- \r\nAND PSY 1210 D-) \r\nOR ( PSY 1010 D- \r\nAND PSY 1410 D-) \r\nOR ( PSY 1210 D- \r\nAND PSY 1410 D-)",
+        "coreq": ""
+      },
+      "PSY 3240": {
+        "prereqData": "PSY 1100 D- \r\nOR ( PSY 1010 D- \r\nAND PSY 1210 D-) \r\nOR ( PSY 1010 D- \r\nAND PSY 1410 D-) \r\nOR ( PSY 1210 D- \r\nAND PSY 1410 D-)",
+        "coreq": ""
+      },
+      "PSY 3450": {
+        "prereqData": "( MTH 2300 D- \r\nOR MTH 2310 D- \r\nOR MTH 3300 D-) \r\nAND PSY 3200 D-",
+        "coreq": ""
+      },
+      "PSY 4220": {
+        "prereqData": "PSY 3220 D-",
+        "coreq": ""
+      },
+      "PSY 4230": {
+        "prereqData": "PSY 3230 D- \r\nOR ( PSY 3420 D- \r\nAND PSY 3421 D-) \r\nOR ( PSY 3420 D- \r\nAND PSY 3422 D-) \r\nOR ( PSY 3421 D- \r\nAND PSY 3422 D-)",
+        "coreq": ""
+      },
+      "PSY 4310": {
+        "prereqData": "PSY 3200 D-",
+        "coreq": ""
+      },
+      "PSY 4320": {
+        "prereqData": "PSY 3200 D-",
+        "coreq": ""
+      },
+      "PSY 4850": {
+        "prereqData": "PSY 3450 D-",
+        "coreq": ""
+      },
+      "PTH 6561": {
+        "prereqData": "PTH 6560 C- \r\nOR PTH 6100 C-",
+        "coreq": ""
+      },
+      "PTH 6562": {
+        "prereqData": "PTH 6560 C- \r\nOR PTH 6100 C-",
+        "coreq": ""
+      },
+      "PTH 6563": {
+        "prereqData": "PTH 6560 C- \r\nOR PTH 6100 C-",
+        "coreq": ""
+      },
+      "PTH 6564": {
+        "prereqData": "PTH 6560 C- \r\nOR PTH 6100 C-",
+        "coreq": ""
+      },
+      "PTH 6900": {
+        "prereqData": "PTH 6100 C-",
+        "coreq": ""
+      },
+      "RFA 6110": {
+        "prereqData": "RFA 6100 C- \r\nAND RFA 6120 C-",
+        "coreq": ""
+      },
+      "RFA 6130": {
+        "prereqData": "RFA 6110 C-",
+        "coreq": ""
+      },
+      "RFA 6200": {
+        "prereqData": "RFA 6100 C- \r\nAND RFA 6120 C-",
+        "coreq": ""
+      },
+      "RFA 6205": {
+        "prereqData": "RFA 6130 C- \r\nAND RFA 6235 C-",
+        "coreq": ""
+      },
+      "RFA 6210": {
+        "prereqData": "RFA 6130 C- \r\nAND RFA 6235 C-",
+        "coreq": ""
+      },
+      "RFA 6215": {
+        "prereqData": "RFA 6225 C-",
+        "coreq": ""
+      },
+      "RFA 6220": {
+        "prereqData": "RFA 6215 C- \r\nAND RFA 6235 C-",
+        "coreq": ""
+      },
+      "RFA 6225": {
+        "prereqData": "RFA 6100 C- \r\nAND RFA 6120 C-",
+        "coreq": ""
+      },
+      "RFA 6230": {
+        "prereqData": "RFA 6215 C- \r\nAND RFA 6235 C-",
+        "coreq": ""
+      },
+      "RFA 6235": {
+        "prereqData": "RFA 6200 C-",
+        "coreq": ""
+      },
+      "RFA 6300": {
+        "prereqData": "RFA 6130 C- \r\nAND RFA 6215 C-",
+        "coreq": ""
+      },
+      "RFA 6310": {
+        "prereqData": "RFA 6235 C-",
+        "coreq": ""
+      },
+      "RFA 6315": {
+        "prereqData": "RFA 6235 C-",
+        "coreq": ""
+      },
+      "RFA 6350": {
+        "prereqData": "RFA 6235 C-",
+        "coreq": ""
+      },
+      "RFA 6410": {
+        "prereqData": "RFA 6235 C-",
+        "coreq": ""
+      },
+      "RFA 6411": {
+        "prereqData": "RFA 6235 C-",
+        "coreq": ""
+      },
+      "RFA 6415": {
+        "prereqData": "RFA 6235 C-",
+        "coreq": ""
+      },
+      "RFA 6420": {
+        "prereqData": "RFA 6235 C-",
+        "coreq": ""
+      },
+      "RFA 6425": {
+        "prereqData": "RFA 6235 C-",
+        "coreq": ""
+      },
+      "RFA 6430": {
+        "prereqData": "RFA 6235 C-",
+        "coreq": ""
+      },
+      "RFA 6920": {
+        "prereqData": "COP 6940 C-",
+        "coreq": ""
+      },
+      "RGA 6112": {
+        "prereqData": "RGA 6200 C- \r\nOR RGA 6202 C- \r\nOR RGA 6205 C-",
+        "coreq": ""
+      },
+      "RGA 6200": {
+        "prereqData": "RGA 6201 C-",
+        "coreq": ""
+      },
+      "RGA 6202": {
+        "prereqData": "RGA 6100 C-",
+        "coreq": ""
+      },
+      "RGA 6203": {
+        "prereqData": "RGA 6200 C- \r\nOR RGA 6202 C-",
+        "coreq": ""
+      },
+      "RGA 6205": {
+        "prereqData": "RGA 6202 C-",
+        "coreq": ""
+      },
+      "RGA 6206": {
+        "prereqData": "RGA 6200 C- \r\nAND RGA 6203 C-",
+        "coreq": ""
+      },
+      "RGA 6210": {
+        "prereqData": "RGA 6202 C- \r\nOR RGA 6220 C- \r\nOR PJM 6000 C-",
+        "coreq": ""
+      },
+      "RGA 6211": {
+        "prereqData": "RGA 6202 C- \r\nAND ( RGA 6200 C- \r\nOR RGA 6205 C-)",
+        "coreq": ""
+      },
+      "RGA 6212": {
+        "prereqData": "RGA 6200 C- \r\nOR RGA 6220 C-",
+        "coreq": ""
+      },
+      "RGA 6215": {
+        "prereqData": "BTC 6210 C- \r\nAND RGA 6100 C- \r\nAND RGA 6201 C-",
+        "coreq": ""
+      },
+      "RGA 6216": {
+        "prereqData": "RGA 6201 C-",
+        "coreq": ""
+      },
+      "RGA 6217": {
+        "prereqData": "RGA 6201 C- \r\nAND RGA 6202 C-",
+        "coreq": ""
+      },
+      "RGA 6218": {
+        "prereqData": "BTC 6210 C- \r\nAND RGA 6201 C- \r\nAND RGA 6202 C-",
+        "coreq": ""
+      },
+      "RGA 6219": {
+        "prereqData": "BTC 6210 C- \r\nAND RGA 6201 C- \r\nAND RGA 6202 C-",
+        "coreq": ""
+      },
+      "RGA 6221": {
+        "prereqData": "( RGA 6201 C- \r\nAND RGA 6202 C-) \r\nOR RGA 6220 C-",
+        "coreq": ""
+      },
+      "RGA 6222": {
+        "prereqData": "RGA 6202 C- \r\nOR RGA 6205 C- \r\nOR RGA 6220 C-",
+        "coreq": ""
+      },
+      "RGA 6223": {
+        "prereqData": "RGA 6200 C- \r\nOR RGA 6220 C-",
+        "coreq": ""
+      },
+      "RGA 6224": {
+        "prereqData": "RGA 6200 C-",
+        "coreq": ""
+      },
+      "RGA 6225": {
+        "prereqData": "RGA 6200 C- \r\nOR RGA 6220 C-",
+        "coreq": ""
+      },
+      "RGA 6226": {
+        "prereqData": "RGA 6202 C- \r\nOR RGA 6220 C-",
+        "coreq": ""
+      },
+      "RGA 6227": {
+        "prereqData": "RGA 6202 C- \r\nOR RGA 6220 C-",
+        "coreq": ""
+      },
+      "RGA 6228": {
+        "prereqData": "RGA 6220 C- \r\nOR BTC 6210 C- \r\nOR RGA 6200 C-",
+        "coreq": ""
+      },
+      "RGA 6229": {
+        "prereqData": "( RGA 6200 C- \r\nAND RGA 6202 C-) \r\nOR RGA 6221 C- \r\nOR RGA 6222 C-",
+        "coreq": ""
+      },
+      "RGA 6230": {
+        "prereqData": "RGA 6201 C- \r\nAND BTC 6210 C-",
+        "coreq": ""
+      },
+      "RGA 6234": {
+        "prereqData": "RGA 6100 C- \r\nAND RGA 6202 C-",
+        "coreq": ""
+      },
+      "RGA 6240": {
+        "prereqData": "RGA 6200 C-",
+        "coreq": ""
+      },
+      "RGA 6245": {
+        "prereqData": "RGA 6200 C-",
+        "coreq": ""
+      },
+      "RGA 6250": {
+        "prereqData": "RGA 6200 C-",
+        "coreq": ""
+      },
+      "RGA 6300": {
+        "prereqData": "RGA 6200 C- \r\nAND RGA 6203 C-",
+        "coreq": ""
+      },
+      "RGA 6920": {
+        "prereqData": "COP 6940 C-",
+        "coreq": ""
+      },
+      "RGA 6961": {
+        "prereqData": "RGA 6100 C- \r\nAND RGA 6200 C- \r\nAND RGA 6201 C- \r\nAND RGA 6202 C-",
+        "coreq": ""
+      },
+      "RMS 6110": {
+        "prereqData": "RMS 5105 D- \r\nOR RMS 5105 C-",
+        "coreq": ""
+      },
+      "RMS 6220": {
+        "prereqData": "RMS 5105 C-",
+        "coreq": ""
+      },
+      "RMS 6230": {
+        "prereqData": "RMS 5105 C- \r\nAND RMS 6110 C-",
+        "coreq": ""
+      },
+      "RMS 6240": {
+        "prereqData": "RMS 5105 C-",
+        "coreq": ""
+      },
+      "RMS 6250": {
+        "prereqData": "RMS 5105 C- \r\nAND RMS 6110 C-",
+        "coreq": ""
+      },
+      "RMS 6260": {
+        "prereqData": "RMS 5105 C-",
+        "coreq": ""
+      },
+      "RMS 6270": {
+        "prereqData": "RMS 5105 C- \r\nAND RMS 6110 C-",
+        "coreq": ""
+      },
+      "RMS 6280": {
+        "prereqData": "RMS 5105 C-",
+        "coreq": ""
+      },
+      "RMS 6290": {
+        "prereqData": "RMS 5105 C- \r\nAND RMS 6110 C-",
+        "coreq": ""
+      },
+      "RMS 6292": {
+        "prereqData": "RMS 5105 C-",
+        "coreq": ""
+      },
+      "RPT 6970": {
+        "prereqData": "RPT 7205 C- \r\nAND RPT 7210 C-",
+        "coreq": ""
+      },
+      "RPT 7215": {
+        "prereqData": "RPT 7210 C-",
+        "coreq": ""
+      },
+      "SOC 2320": {
+        "prereqData": "SOC 1100 D-",
+        "coreq": ""
+      },
+      "SOC 2340": {
+        "prereqData": "SOC 1100 D-",
+        "coreq": ""
+      },
+      "SOC 2350": {
+        "prereqData": "SOC 1100 D- \r\nOR PSY 1100 D- \r\nOR ( PSY 1010 D- \r\nAND PSY 1210 D-) \r\nOR ( PSY 1010 D- \r\nAND PSY 1410 D-) \r\nOR ( PSY 1210 D- \r\nAND PSY 1410 D-)",
+        "coreq": ""
+      },
+      "TCC 3200": {
+        "prereqData": "TCC 2200 D- \r\nAND ENG 1107 D-",
+        "coreq": ""
+      },
+      "TCC 3210": {
+        "prereqData": "ENG 1107 D- \r\nAND TCC 2200 D-",
+        "coreq": ""
+      },
+      "TCC 3220": {
+        "prereqData": "ENG 1107 D- \r\nAND TCC 2200 D-",
+        "coreq": ""
+      },
+      "TCC 3230": {
+        "prereqData": "ENG 1107 D- \r\nAND TCC 2200 D-",
+        "coreq": ""
+      },
+      "TCC 3240": {
+        "prereqData": "ENG 1107 D- \r\nAND TCC 2200 D-",
+        "coreq": ""
+      },
+      "TCC 3450": {
+        "prereqData": "ENG 1107 D- \r\nAND TCC 2200 D-",
+        "coreq": ""
+      },
+      "TCC 6340": {
+        "prereqData": "TCC 6330 C-",
+        "coreq": ""
+      },
+      "TCC 6350": {
+        "prereqData": "TCC 6330 C-",
+        "coreq": ""
+      },
+      "TCC 6360": {
+        "prereqData": "TCC 6330 C-",
+        "coreq": ""
+      },
+      "TCC 6400": {
+        "prereqData": "TCC 6630 B",
+        "coreq": ""
+      },
+      "TCC 6650": {
+        "prereqData": "TCC 6330 C-",
+        "coreq": ""
+      },
+      "TCC 6660": {
+        "prereqData": "TCC 6330 C-",
+        "coreq": ""
+      },
+      "TCC 6850": {
+        "prereqData": "TCC 6100 C- \r\nAND TCC 6102 C- \r\nAND TCC 6110 C- \r\nAND TCC 6120 C-",
+        "coreq": ""
+      },
+      "TCM 6040": {
+        "prereqData": "TCM 6010 C-",
+        "coreq": ""
+      },
+      "TCM 6060": {
+        "prereqData": "TCM 6040 C-",
+        "coreq": ""
+      },
+      "TCM 6070": {
+        "prereqData": "TCM 6010 C-",
+        "coreq": ""
+      }
+    }
+  }

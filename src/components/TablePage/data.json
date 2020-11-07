@@ -1,10 +1,10 @@
 {
   "students": [
     {
-      "id": "001352185",
-      "name": "DohyoungKim",
-      "email": "kim.doh@northeastern.edu",
       "major": "IT",
+      "id": "001352185",
+      "name": "Doh Kim",
+      "email": "kim.doh@northeastern.edu",
       "curriculumModules": [
         {
           "priority": 1,
@@ -17,7 +17,6 @@
           "assignedCourse": "INT2000"
         }
       ],
-
       "possibleCombinations": [
         {
           "priority": 20,

@@ -191,13 +191,13 @@ function convertClassRows(classRows) {
 function convertCurriculumRows(curriculumRows) {
   //Input: curriculum Rows(array) extracted from xls file
   //Output: curriculums object
-  let curriculums = [];
+  let curriculums = {};
   let module = {
     courseOptions: [],
     isAvaialbleCourseExist: true,
     availableCourses: []
   };
-  let modules = [];
+  let modules = {};
   // Data conversion
   for (let i = 1; i < curriculumRows.length + 1; i++) {
     let row = curriculumRows[i];

@@ -3,6 +3,7 @@ import './ExcelFileUploadPage.css';
 import { readExcelFile } from './ExcelFileReader';
 import { FaDownload, FaUpload } from 'react-icons/fa';
 import { useHistory } from 'react-router-dom';
+import { setAvailableCourses, setNextCrns } from './nuadvisor';
 
 const imagePath = process.env.PUBLIC_URL + '/assets/img';
 
@@ -25,7 +26,7 @@ function ExcelFileUpload() {
   return (
     <div className="file__page">
       <div className="file__box">
-        <img src={`${imagePath}/logo.png`} className="file__logo"></img>
+        <img src={`${imagePath}/logo.png`} className="file__logo" />
         <p className="file__guide">Please upload an excel file (required) </p>
         <button
           id="excelFile_style"
@@ -55,6 +56,10 @@ function ExcelFileUpload() {
           accept=".xls, .xlsx"
           onChange={e => {
             readExcelFile(e.target.files[0], result => {
+              setAvailableCourses(result.courses, result.curriculums);
+              /*
+              setNextCrns(result.students, result.curriculums);
+              */
               dispatch({ type: 'upload', value: result });
               history.push('/');
             });

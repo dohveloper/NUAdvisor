@@ -12,6 +12,7 @@ class term {
       F: []
     };
   }
+
   addClass(moduleNumber, classToAdd) {
     this.totalCourse++;
     //increment onlineCourse if online
@@ -31,10 +32,10 @@ class term {
   }
 }
 
-export let getAvailableModules = (curriculum, courses) => {
+export let setAvailableCourses = (curriculum, courses) => {
   /*
-  purpose: Get available modules & courses for this term (is class of Module courseOption exist)
-  result: Update curriculum data ("isAvailableCourseExist","availableCourses")
+  [purpose]: Get available modules & courses for this term (is class of Module courseOption exist)
+  [result]: Update curriculum data ("isAvailableCourseExist","availableCourses")
   */
   for (let i = 0; i < curriculum.modules.length(); i++) {
     let selectedModule = curriculum.modules[i];
@@ -51,7 +52,7 @@ export let getAvailableModules = (curriculum, courses) => {
     });
   }
 };
-export let getNextCrns = (student, curriculum) => {
+export let setNextCrns = (student, curriculum) => {
   /*
   purpose:  Get next crns for student. 
   result: return array of next crns that are not conlicted with each other. 
@@ -98,14 +99,16 @@ export let getNextCrns = (student, curriculum) => {
   //)if(remain<LAST_SEMESTER_MAX) -> Last semester
   //)if(remain=0) -> No more class.
 };
-export let isB50 = selectedClass => {
+
+//Validation
+let isB50 = selectedClass => {
   let isB50 = true;
   if (selectedClass.section != 'B50') {
     isB50 = false;
   }
   return isB50;
 };
-export let isScheduleOK = (currentTerm, selectedClass) => {
+let isScheduleOK = (currentTerm, selectedClass) => {
   let isScheduleOK = true;
   let dayOfWeek = selectedClass.dayOfWeek;
   let schedules = currentTerm.timeTable[dayOfWeek];
@@ -117,7 +120,7 @@ export let isScheduleOK = (currentTerm, selectedClass) => {
   }
   return isScheduleOK;
 };
-export let isSEVPOK = (currentTerm, selectedClass) => {
+let isSEVPOK = (currentTerm, selectedClass) => {
   let isSEVPOK = true;
   //If selectedClass is online
   if (selectedClass.campusCode == 'VTL') {
@@ -127,7 +130,7 @@ export let isSEVPOK = (currentTerm, selectedClass) => {
   }
   return isSEVPOK;
 };
-export let isCoreqOK = (prerequisiteTable, currentTerm, selectedClass) => {
+let isCoreqOK = (prerequisiteTable, currentTerm, selectedClass) => {
   let isCoreqOK = true;
   let coreq = preqcorequisiteTable[selectedClass.combinedCourseNumber].coreq;
   //If coreq exist
