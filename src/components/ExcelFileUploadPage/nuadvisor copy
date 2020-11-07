@@ -1,9 +1,10 @@
+
 class term {
   constructor() {
     this.totalCourse = 0;
     this.onlineCourse = 0;
     this.crns = [];
-    this.classes = [];
+    this.classList = [{ moduleId }];
     this.timeTable = {
       M: [],
       T: [],
@@ -13,7 +14,11 @@ class term {
     };
   }
 
-  addClass(moduleNumber, classToAdd) {
+  addClass(moduleId, classToAdd) {
+    //setModuleNumber of classToAdd
+    classToAdd.moduleId = moduleId;
+
+    //increment totalCourse
     this.totalCourse++;
     //increment onlineCourse if online
     if (classToAdd.campusCode == 'VTL') {
@@ -23,36 +28,14 @@ class term {
     this.crns.push(classToAdd.crn);
 
     //add to classes
-    classToAdd.moduleNumber = moduleNumber;
     this.classes.push(classToAdd);
-
     //add to timetable
     let newSchedule = { startTime: classToAdd.startTime, endTime: classToAdd.endTime };
     this.timeTable[classToAdd.dayOfWeek].push(newSchedule);
   }
 }
 
-export let setAvailableCourses = (curriculum, courses) => {
-  /*
-  [purpose]: Get available modules & courses for this term (is class of Module courseOption exist)
-  [result]: Update curriculum data ("isAvailableCourseExist","availableCourses")
-  */
-  for (let i = 0; i < curriculum.modules.length(); i++) {
-    let selectedModule = curriculum.modules[i];
-    //Repeat until check all courses for selected module
-    selectedModule.courseOptions.forEach(combinedCourseNumber => {
-      //1) Check if classes of that course exist in this term
-      let classes = courses[combinedCourseNumber].classes;
-      if (classes.length != 0) {
-        //2) add to curriculum's "availableCourses" & "isAvailableCourseExist".
-        let availableCourse = { combinedCourseNumber: combinedCourseNumber, classes: classes };
-        availableCourses.push(availableCourse);
-        selectedModule.isAvailableCourseExist = true;
-      }
-    });
-  }
-};
-export let setNextCrns = (student, curriculum) => {
+export let setNextCrns = (students, curriculums) => {
   /*
   purpose:  Get next crns for student. 
   result: return array of next crns that are not conlicted with each other. 
@@ -60,38 +43,41 @@ export let setNextCrns = (student, curriculum) => {
 
   let currentTerm = new Term();
 
-  //Check Individual
-  //1)get indexes of remain curriculumModules of that students.
-  let remainModuleIndexes = [];
-  student.curriculumModules.forEach((module, index) => {
-    if (!module.isCompleted) {
-      remainModuleIndexes.push(module.priority);
-    }
-  });
+  for (let i = 0; i < students.length(); i++) {
+    let student = students[i];
+    let curriculum = curriculums[student.major];
 
-  //2)if(remain>=LAST_SEMESTER_MAX) -> Not last semeste
-  if (remainModuleIndexes.length() >= LAST_SEMESTER_MAX) {
-    //2.1)Select modules
-    let moduleNumber = remainModulesIndex[0];
-    let selectedModule = curriculum.modules[moduleNumber];
+    //1)get indexes of remain curriculumModules of that students. (module.priority is same with module number)
+    let remainModuleIndexes = [];
+    student.curriculumModules.forEach((module, index) => {
+      if (!module.isCompleted) {
+        remainModuleIndexes.push(module.priority);
+      }
+    });
 
-    if (selectedModule.isAvailableCourseExist) {
-      //2.2)Select course
-      let selectedCourse = selectedModule.availableCourses[0];
+    //2)if remain>=LAST_SEMESTER_MAX ,which means Not last semester
+    if (remainModuleIndexes.length() >= LAST_SEMESTER_MAX) {
+      //2.1)Select modules
+      let moduleId = remainModulesIndex[0];
+      let selectedModule = curriculum.modules[moduleId];
 
-      //2.3)Select class
-      let selectedClass = selectedCourse.classes[0];
+      if (selectedModule.isAvailableCourseExist) {
+        //2.2)Select course
+        let selectedCourse = selectedModule.availableCourses[0];
 
-      //2.4)Check if it is OK
-      let isB50 = isB50(selectedClass);
-      let isScheduleOK = isScheduleOK(currentTerm, selectedClass);
-      let isSEVPOK = isSEVPOK(currentTerm, selectedClass);
-      let isCoreqOK = isCoreqOK(currentTerm, selectedClass);
-      //If all OK
-      if (isB50 && isScheduleOK && isSEVPOK && isCoreqOK) {
-        //Add to current term
+        //2.3)Select class
+        let selectedClass = selectedCourse.classes[0];
 
-        currentTerm.addClass(moduleNumber, classToAdd);
+        //2.4)Check if it is OK
+        let isB50 = isB50(selectedClass);
+        let isScheduleOK = isScheduleOK(currentTerm, selectedClass);
+        let isSEVPOK = isSEVPOK(currentTerm, selectedClass);
+        let isCoreqOK = isCoreqOK(currentTerm, selectedClass);
+        //If all OK
+        if (isB50 && isScheduleOK && isSEVPOK && isCoreqOK) {
+          //Add to current term
+          currentTerm.addClass(moduleId, selectedClass);
+        }
       }
     }
   }

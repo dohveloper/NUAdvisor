@@ -65,7 +65,9 @@ function convertStudentRows(studentRows) {
     email: '',
     curriculumModules: []
   };
+
   let curriculumModule = {};
+  let curriculumCount = studentRows[0].length - 4;
 
   for (let i = 1; i < studentRows.length + 1; i++) {
     //Get a row
@@ -79,24 +81,30 @@ function convertStudentRows(studentRows) {
       break;
     }
     //1. Set student
-    let studentTemp = { ...student };
+    let studentTemp = JSON.parse(JSON.stringify(student));
     studentTemp.major = row[0];
     studentTemp.id = row[1];
     studentTemp.name = row[2];
     studentTemp.email = row[3];
 
     //2.Set Curriculum Module
-    //- priority
-    let curriculumModuleTemp = { ...curriculumModule };
-    curriculumModuleTemp.priority = i;
-    //- isCompleted & assigned Course
-    if (row[3 + i] !== undefined) {
-      curriculumModuleTemp.isCompleted = true;
-      curriculumModuleTemp.assignedCourse = row[3 + i];
-    } else {
-      curriculumModuleTemp.isCompleted = false;
+    //Get curriculum count ->  Excel File -Student tab - number of curriculum (ex.#1,#2....)
+
+    console.log('curriCount', curriculumCount);
+
+    for (let i = 1; i < curriculumCount + 1; i++) {
+      let curriculumModuleTemp = {};
+      // Set id
+      curriculumModuleTemp.id = i;
+      // Set isCompleted & assigned Course
+      if (row[3 + i] !== undefined) {
+        curriculumModuleTemp.isCompleted = true;
+        curriculumModuleTemp.assignedCourse = row[3 + i];
+      } else {
+        curriculumModuleTemp.isCompleted = false;
+      }
+      studentTemp.curriculumModules.push(curriculumModuleTemp);
     }
-    student.curriculumModules.push(curriculumModuleTemp);
 
     //3. Push Student into array
     students.push(studentTemp);
