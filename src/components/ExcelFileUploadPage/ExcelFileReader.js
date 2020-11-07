@@ -229,12 +229,19 @@ function convertCurriculumRows(curriculumRows) {
     newModule.availableCourses = [];
 
     //2. Set module
-    for (let j = 1; j < row.length; j++) {
+
+    for (let j = 1; j < curriculumRows[0].length; j++) {
       /* In excel file, Curriculum tab, course Options are string,separated by '/'(ex INT2000/PHL2000/MTH1200). 
        This fucntion changes that into array of courses (ex [INT2000,PHL2000,MTH1200]) */
+
       let courseOptionsString = row[j];
-      let courseOptions = courseOptionsString.split('/');
-      newModules[`${j}`] = { courseOptions: courseOptions, isAvailableCourseExist: false, availableCourses: [] };
+      let courseOptions = [];
+      if (courseOptionsString !== undefined) {
+        courseOptions = courseOptionsString.split('/');
+      } else {
+        console.log('Some of empty curriculum. Check the excel file');
+      }
+      newModules[j] = { courseOptions: courseOptions, isAvailableCourseExist: false, availableCourses: [] };
     }
 
     //3.add Module
