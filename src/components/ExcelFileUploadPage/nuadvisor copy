@@ -1,40 +1,4 @@
 
-class term {
-  constructor() {
-    this.totalCourse = 0;
-    this.onlineCourse = 0;
-    this.crns = [];
-    this.classList = [{ moduleId }];
-    this.timeTable = {
-      M: [],
-      T: [],
-      W: [],
-      T: [],
-      F: []
-    };
-  }
-
-  addClass(moduleId, classToAdd) {
-    //setModuleNumber of classToAdd
-    classToAdd.moduleId = moduleId;
-
-    //increment totalCourse
-    this.totalCourse++;
-    //increment onlineCourse if online
-    if (classToAdd.campusCode == 'VTL') {
-      this.onlineCourse++;
-    }
-    //add to crn
-    this.crns.push(classToAdd.crn);
-
-    //add to classes
-    this.classes.push(classToAdd);
-    //add to timetable
-    let newSchedule = { startTime: classToAdd.startTime, endTime: classToAdd.endTime };
-    this.timeTable[classToAdd.dayOfWeek].push(newSchedule);
-  }
-}
-
 export let setNextCrns = (students, curriculums) => {
   /*
   purpose:  Get next crns for student. 
@@ -47,18 +11,18 @@ export let setNextCrns = (students, curriculums) => {
     let student = students[i];
     let curriculum = curriculums[student.major];
 
-    //1)get indexes of remain curriculumModules of that students. (module.priority is same with module number)
-    let remainModuleIndexes = [];
+    //1)get list of ids of remain curriculumModules of that students.
+    let remainModuleIds = [];
     student.curriculumModules.forEach((module, index) => {
       if (!module.isCompleted) {
-        remainModuleIndexes.push(module.priority);
+        remainModuleIds.push(module.id);
       }
     });
 
     //2)if remain>=LAST_SEMESTER_MAX ,which means Not last semester
-    if (remainModuleIndexes.length() >= LAST_SEMESTER_MAX) {
+    if (remainModuleIds.length() >= LAST_SEMESTER_MAX) {
       //2.1)Select modules
-      let moduleId = remainModulesIndex[0];
+      let moduleId = remainModuleIds[0];
       let selectedModule = curriculum.modules[moduleId];
 
       if (selectedModule.isAvailableCourseExist) {
@@ -73,6 +37,7 @@ export let setNextCrns = (students, curriculums) => {
         let isScheduleOK = isScheduleOK(currentTerm, selectedClass);
         let isSEVPOK = isSEVPOK(currentTerm, selectedClass);
         let isCoreqOK = isCoreqOK(currentTerm, selectedClass);
+        //let isNotTaken = isNotTaken(student.completedCourse,selectedClass)
         //If all OK
         if (isB50 && isScheduleOK && isSEVPOK && isCoreqOK) {
           //Add to current term
@@ -99,7 +64,7 @@ let isScheduleOK = (currentTerm, selectedClass) => {
   let dayOfWeek = selectedClass.dayOfWeek;
   let schedules = currentTerm.timeTable[dayOfWeek];
   for (let i = 0; i < schedules.length(); i++) {
-    if (!(selectedClass.startTime >= schedules[i].endTime || selectedClass.endTime <= schedule.startTime)) {
+    if (!(selectedClass.startTime >= schedules[i].endTime || selectedClass.endTime <= schedules[i].startTime)) {
       //If conflict
       isScheduleOK = false;
     }
@@ -110,13 +75,13 @@ let isSEVPOK = (currentTerm, selectedClass) => {
   let isSEVPOK = true;
   //If selectedClass is online
   if (selectedClass.campusCode == 'VTL') {
-    if (currentTerm.onlineClass >= MAX_ONLINE_CLASS) {
+    if (currentTerm.onlineClass >= ONLINE_MAX) {
       isSEVPOK = false;
     }
   }
   return isSEVPOK;
 };
-let isCoreqOK = (prerequisiteTable, currentTerm, selectedClass) => {
+let isCoreqOK = (preqcorequisiteTable, currentTerm, selectedClass) => {
   let isCoreqOK = true;
   let coreq = preqcorequisiteTable[selectedClass.combinedCourseNumber].coreq;
   //If coreq exist
@@ -131,7 +96,7 @@ let isCoreqOK = (prerequisiteTable, currentTerm, selectedClass) => {
 };
 
 let getClasses = (courses, combinedCourseNumber) => {
-  courses[combinedCourseNumber].classes;
+  return courses[combinedCourseNumber].classes;
 };
 let getB50Classes = classes => {
   let b50Classes = [];

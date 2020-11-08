@@ -63,6 +63,7 @@ function convertStudentRows(studentRows) {
     id: '',
     name: '',
     email: '',
+    completedCourses: [],
     curriculumModules: []
   };
 
@@ -90,8 +91,6 @@ function convertStudentRows(studentRows) {
     //2.Set Curriculum Module
     //Get curriculum count ->  Excel File -Student tab - number of curriculum (ex.#1,#2....)
 
-    console.log('curriCount', curriculumCount);
-
     for (let i = 1; i < curriculumCount + 1; i++) {
       let curriculumModuleTemp = {};
       // Set id
@@ -100,6 +99,7 @@ function convertStudentRows(studentRows) {
       if (row[3 + i] !== undefined) {
         curriculumModuleTemp.isCompleted = true;
         curriculumModuleTemp.assignedCourse = row[3 + i];
+        studentTemp.completedCourses.push(curriculumModuleTemp.assignedCourse);
       } else {
         curriculumModuleTemp.isCompleted = false;
         curriculumModuleTemp.assignedCourse = '';

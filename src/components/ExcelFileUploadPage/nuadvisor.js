@@ -33,3 +33,37 @@ export let setAvailableCourses = (courses, curriculums) => {
     }
   }
 };
+const LAST_SEMESTER_MAX = 5;
+const ONLINE_MAX = 5;
+class Term {
+  constructor() {
+    this.totalCourse = 0;
+    this.onlineCourse = 0;
+    this.crns = [];
+    this.classList = [{ moduleId: 0, classData: {} }];
+    this.timeTable = {
+      M: [],
+      T: [],
+      W: [],
+      T: [],
+      F: []
+    };
+  }
+
+  addClass(moduleId, classData) {
+    //increment totalCourse
+    this.totalCourse++;
+    //increment onlineCourse if online
+    if (classData.campusCode == 'VTL') {
+      this.onlineCourse++;
+    }
+    //add to crn
+    this.crns.push(classData.crn);
+    //add to classes with module id
+    let newClassData = { moduleId, classData };
+    this.classList.push(newClassData);
+    //add to timetable
+    let newSchedule = { startTime: classData.startTime, endTime: classData.endTime };
+    this.timeTable[classData.dayOfWeek].push(newSchedule);
+  }
+}
