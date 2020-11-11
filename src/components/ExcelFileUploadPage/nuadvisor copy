@@ -1,4 +1,39 @@
 
+const LAST_SEMESTER_MAX = 5;
+const ONLINE_MAX = 5;
+class Term {
+  constructor() {
+    this.totalCourse = 0;
+    this.onlineCourse = 0;
+    this.crns = [];
+    this.classList = [{ moduleId: 0, classData: {} }];
+    this.timeTable = {
+      M: [],
+      T: [],
+      W: [],
+      T: [],
+      F: []
+    };
+  }
+
+  addClass(moduleId, classData) {
+    //increment totalCourse
+    this.totalCourse++;
+    //increment onlineCourse if online
+    if (classData.campusCode == 'VTL') {
+      this.onlineCourse++;
+    }
+    //add to crn
+    this.crns.push(classData.crn);
+    //add to classes with module id
+    let newClassData = { moduleId, classData };
+    this.classList.push(newClassData);
+    //add to timetable
+    let newSchedule = { startTime: classData.startTime, endTime: classData.endTime };
+    this.timeTable[classData.dayOfWeek].push(newSchedule);
+  }
+}
+
 export let setNextCrns = (students, curriculums) => {
   /*
   purpose:  Get next crns for student. 
@@ -37,7 +72,7 @@ export let setNextCrns = (students, curriculums) => {
         let isScheduleOK = isScheduleOK(currentTerm, selectedClass);
         let isSEVPOK = isSEVPOK(currentTerm, selectedClass);
         let isCoreqOK = isCoreqOK(currentTerm, selectedClass);
-        //let isNotTaken = isNotTaken(student.completedCourse,selectedClass)
+        //let isNotTaken = isNotTaken(student.completedCourse, selectedClass);
         //If all OK
         if (isB50 && isScheduleOK && isSEVPOK && isCoreqOK) {
           //Add to current term
@@ -106,4 +141,31 @@ let getB50Classes = classes => {
     }
   });
   return b50Classes;
+};
+
+//test
+let getNextCRN = (students, curriculum) => {
+  for (let i = 0; i < students.length(); i++) {
+    //Get student&curriculum
+    let student = students[i];
+    let curriculum = curriculums[student.major];
+
+    //Get list of ids of remain curriculumModules of that students.
+    let remainModuleIds = [];
+    student.curriculumModules.forEach((module, index) => {
+      if (!module.isCompleted) {
+        remainModuleIds.push(module.id);
+      }
+    });
+
+    //Get module combination
+
+    let selectedModuleCombination = [1, 2, 3, 4, 5];
+
+    //Get class combination
+    let classListWithoutConflict = [];
+    for (let i = 0; i < lists.length(); i++) {
+      classListWithoutConflict[i] = getAvailableClasses(currentClasses, maxOfOnlineClasses);
+    }
+  }
 };

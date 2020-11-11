@@ -4,6 +4,7 @@ import { readExcelFile } from './ExcelFileReader';
 import { FaDownload, FaUpload } from 'react-icons/fa';
 import { useHistory } from 'react-router-dom';
 import { setAvailableCourses, setNextCrns } from './nuadvisor';
+import { getBestCombination } from './core';
 
 const imagePath = process.env.PUBLIC_URL + '/assets/img';
 
@@ -56,9 +57,14 @@ function ExcelFileUpload() {
           accept=".xls, .xlsx"
           onChange={e => {
             readExcelFile(e.target.files[0], result => {
+              //set curriculum available courses data
               setAvailableCourses(result.courses, result.curriculums);
-              //setNextCrns(result.students, result.curriculums);
+              //get list of available classes
 
+              getBestCombination(result);
+
+              //getClassCombination(4,1);
+              //setNextCrns(result.students, result.curriculums);
               dispatch({ type: 'upload', value: result });
               history.push('/');
             });

@@ -40,17 +40,17 @@ export const readExcelFile = (file, callback) => {
   else reader.readAsArrayBuffer(file);
 };
 
-function dataConverter(studentRows, classRows, curriculumRows, preqcoreqRows) {
+function dataConverter(studentRows, classRows, curriculumRows, preqRows) {
   let students;
   let courses;
   let curriculums;
-  let preqcoreqTable;
+  let preqTable;
 
   students = convertStudentRows(studentRows);
   courses = convertClassRows(classRows);
   curriculums = convertCurriculumRows(curriculumRows);
-  preqcoreqTable = convertPreqTable(preqcoreqRows);
-  return { students, courses, curriculums, preqcoreqTable };
+  preqTable = convertPreqTable(preqRows);
+  return { students, courses, curriculums, preqTable };
 }
 
 function convertStudentRows(studentRows) {
@@ -67,7 +67,6 @@ function convertStudentRows(studentRows) {
     curriculumModules: []
   };
 
-  let curriculumModule = {};
   let curriculumCount = studentRows[0].length - 4;
 
   for (let i = 1; i < studentRows.length + 1; i++) {
@@ -254,7 +253,7 @@ function convertCurriculumRows(curriculumRows) {
 function convertPreqTable(preqcoreqRows) {
   let preqTable = {};
   let combinedCourseNumber;
-  let prereqData;
+  let preq;
   let coreq;
   let row;
 
@@ -262,10 +261,10 @@ function convertPreqTable(preqcoreqRows) {
     row = preqcoreqRows[i];
 
     combinedCourseNumber = row[0];
-    prereqData = row[1];
+    preq = row[1];
     coreq = row[2];
 
-    preqTable[combinedCourseNumber] = { prereqData, coreq };
+    preqTable[combinedCourseNumber] = { preq, coreq };
   }
   return preqTable;
 }
