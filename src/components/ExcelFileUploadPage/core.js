@@ -35,10 +35,9 @@ let getCombinationsOfRemainModules = student => {
       listOfModules.push(module.id);
     }
   });
-  console.log('listOfModules:', listOfModules);
+
   //get Combination of Remain modules
   getCombinations(count, listOfModules, current, combinations);
-  console.log('combination:', combinations);
   return combinations;
 };
 
@@ -46,10 +45,6 @@ let getCombinationsOfRemainModules = student => {
 let getCombinations = (count, listOfModules, current, combinations) => {
   if (count === 0) {
     combinations.push(current);
-    console.log('-----COMBINATION FOUND|| ADD TO COMBINATIONS----- ');
-    console.log('-----Current Combination:', current);
-    console.log('-----Total Combinations:', combinations);
-
     return 1;
   }
   if (listOfModules.length === 0) {
@@ -57,23 +52,17 @@ let getCombinations = (count, listOfModules, current, combinations) => {
   }
 
   for (let i = 0; i < listOfModules.length; i++) {
-    console.log('--------------------------------------------------');
-    console.log('A number of left Modules to select(count):', count);
-
     //select one module
     let selectedModule = listOfModules[i];
-    console.log('current selectedModule', selectedModule);
     //add to current combination
     let combinationTest = [...current];
     combinationTest.push(selectedModule);
-    console.log('current combination trying to test...', combinationTest);
     // make newlist by removing all modules that is already included to current
     let newListOfModules = [...listOfModules];
     for (let j = i; j > -1; j--) {
       let index = newListOfModules.indexOf(listOfModules[j]);
       newListOfModules.splice(index, 1);
     }
-    console.log('next possible modules', newListOfModules);
 
     getCombinations(count - 1, newListOfModules, combinationTest, combinations);
   }
