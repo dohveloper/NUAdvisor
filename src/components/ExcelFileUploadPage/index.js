@@ -60,8 +60,7 @@ function ExcelFileUpload() {
               //set curriculum available courses data
               setAvailableCourses(result.courses, result.curriculums);
               //get list of available classes
-
-              getBestCombination(result);
+              getBestCombination(result, result.students[0].id);
 
               //getClassCombination(4,1);
               //setNextCrns(result.students, result.curriculums);

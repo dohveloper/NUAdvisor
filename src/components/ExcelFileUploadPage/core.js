@@ -1,28 +1,22 @@
-export let getBestCombination = data => {
+export let getBestCombination = (data, studentId) => {
   let moduleCombinations = [[1, 2, 3, 5]];
-  let bestClassCombination = [];
-  let completedCourses = [];
-  console.log(data);
-  //1. Get Module Combination of remain module of student
-  moduleCombinations = getCombinationsOfRemainModules(data.students[0]);
-  /*
-  //2. Get Completed Courses of Student
-  completedCourses = getCompletedCourses(data.students[0]);
+  let classCombinations = [];
 
-  //3. Get Best Class Combination for that moduleCombination until possibleCombination found
-  for (let i = 0; i < moduleCombinations.length; i++) {
-    let moduleCombination = moduleCombinations[i];
-    bestClassCombination = getBestClassCombination(data, completedCourses, moduleCombination);
-    if (bestClassCombination.length !== 0) {
-      break;
-    }
-  }
-  
-  return bestClassCombination;
-  */
+  //0. Get Student by ID
+  let students = data.students;
+  let student = students.find(student => student.id === studentId);
+
+  //1. Get Module Combination of remain module of student
+  moduleCombinations = getCombinationsOfRemainModules(student);
+
+  //2. Get Class Combination
+  let moduleCombination = moduleCombinations[0];
+  classCombinations = getCombinationsOfClasses(data, student, moduleCombination);
+
+  return classCombinations;
 };
 
-//1
+//1 Module Combination
 let getCombinationsOfRemainModules = student => {
   let combinations = [];
   let count = 5;
@@ -37,12 +31,13 @@ let getCombinationsOfRemainModules = student => {
   });
 
   //get Combination of Remain modules
-  getCombinations(count, listOfModules, current, combinations);
+  getModuleCombinations(count, listOfModules, current, combinations);
+  console.log(combinations);
   return combinations;
 };
 
-//Recursion
-let getCombinations = (count, listOfModules, current, combinations) => {
+//1.1 Recursion
+let getModuleCombinations = (count, listOfModules, current, combinations) => {
   if (count === 0) {
     combinations.push(current);
     return 1;
@@ -63,12 +58,68 @@ let getCombinations = (count, listOfModules, current, combinations) => {
       let index = newListOfModules.indexOf(listOfModules[j]);
       newListOfModules.splice(index, 1);
     }
-
-    getCombinations(count - 1, newListOfModules, combinationTest, combinations);
+    getModuleCombinations(count - 1, newListOfModules, combinationTest, combinations);
   }
 };
 
-//2
+//2 Class Combination
+let getCombinationsOfClasses = (data, student, moduleCombination) => {
+  let classCombinations = [];
+  let currentCombination = [];
+  let courseCount = 2; // number of totalcourses per semester
+  let onlineCount = 1; // number of online courses per semester
+  let nth = 0;
+  //Get Completed Courses of Student
+  let completedCourses = getCompletedCourses(student);
+
+  getClassCombinations(classCombinations, courseCount, onlineCount, moduleCombination, nth, data, student, completedCourses, currentCombination);
+  return classCombinations;
+};
+
+//2.1 Recursion
+let getClassCombinations = (classCombinations, count, onlineCount, moduleCombination, nth, data, student, completedCourses, currentCombination) => {
+  //1.if courseCount get 0 successfully, it means course combination was found. so add to bestCombination return 1 for break all loops.
+  if (count === 0) {
+    classCombinations.push(currentCombination);
+    return 1;
+  }
+  //2. Get availableClasses for current module
+  let availableClassesOfModule = getAvailableClasses(data, student, currentCombination, completedCourses, nth, moduleCombination, onlineCount);
+  console.log(nth, 'th availableClassesOfModule', availableClassesOfModule);
+  if (availableClassesOfModule.length === 0) {
+    return [];
+  }
+
+  //3.loop all classes to find all combinations until combination found.
+  for (let i = 0; i < availableClassesOfModule.length; i++) {
+    let selectedClass = availableClassesOfModule[i];
+    currentCombination.push(selectedClass);
+
+    //completedCourses considering currentCombinations
+    let currentCompletedCourses = [...completedCourses];
+    currentCompletedCourses.push(selectedClass.combinedCourseNumber);
+
+    //if Coreq exist pushCoreq too.
+    let isCoreqExist = checkCoreqExist(data, selectedClass.combinedCourseNumber);
+    if (isCoreqExist) {
+      let coreqClass = getAvailableCoreqClass(data, currentCombination, selectedClass.combinedCourseNumber);
+      currentCombination.push(coreqClass);
+      currentCompletedCourses.push(coreqClass.combinedCourseNumber);
+    }
+    console.log('currentCombination', currentCombination);
+    //online
+    let updatedOnlineCount = onlineCount;
+    if (selectedClass.campusCode === 'VTL') {
+      updatedOnlineCount = onlineCount - 1; // OnlineCount == OnlineMax
+    }
+
+    //get next available courses
+    getClassCombinations(classCombinations, count - 1, updatedOnlineCount, moduleCombination, nth + 1, data, student, currentCompletedCourses, currentCombination);
+  }
+};
+
+//helper
+
 let getCompletedCourses = student => {
   let completedCourses = [];
   student.curriculumModules.forEach(module => {
@@ -79,65 +130,128 @@ let getCompletedCourses = student => {
   return completedCourses;
 };
 
-//3
-let getBestClassCombination = (data, completedCourses, moduleCombination) => {
-  let bestClassCombination = [];
-  let currentClassCombination = [];
-  let courseCount = 4; // number of totalcourses per semester
-  let onlineCount = 1; // number of online courses per semester
-  //2. Get Best Class Combination
-  getBestClassCombinationRecursion(data, completedCourses, 0, moduleCombination, bestClassCombination, currentClassCombination, courseCount, onlineCount);
-  return bestClassCombination;
+let getAvailableClasses = (data, student, currentCombination, completedCourses, nth, moduleCombination, onlineCount) => {
+  let availableClasses = [];
+
+  //get Available courses of that module
+  let moduleId = moduleCombination[nth];
+  let availableCourses = data.curriculums[student.major].modules[moduleId].availableCourses;
+
+  console.log('availableCourses', availableCourses);
+
+  //get Available Classes that are filtered with conditions
+  for (let i = 0; i < availableCourses.length; i++) {
+    let course = availableCourses[i];
+
+    //is preq completed?
+    let isPreqOK = checkPreqOK(data, course.combinedCourseNumber, completedCourses);
+    //is already done in other modules?
+    let isFirstTime = !completedCourses.includes(course.combinedCourseNumber);
+    //is Coreq OK - If exist, ScheduleOK?
+    let isCoreqOK = checkCoreqOK(data, currentCombination, course.combinedCourseNumber);
+
+    course.classes.forEach(classData => {
+      let isScheduleOK = checkScheduleOK(currentCombination, classData);
+
+      //isSevpOK?
+      let isSevpOK = checkSevpOK(onlineCount, classData);
+
+      //if all ok, then add
+      if (isPreqOK && isFirstTime && isCoreqOK && isScheduleOK && isSevpOK) {
+        availableClasses.push(classData);
+      }
+    });
+  }
+  return availableClasses;
 };
 
-let getBestClassCombinationRecursion = (data, completedCourses, nthModule, moduleCombination, bestClassCombination, currentClassCombination, courseCount, onlineCount) => {
-  // if courseCount get 0 successfully, it means course combination was found. so add to bestClassCombination return 1 for break all loops.
-  if (courseCount === 0) {
-    return 1;
-  }
-
-  //get available classes of module (no schedule conflict, no sevp conflict)
-  let availableClassesOfModule = getAvailableClassesOfModule(data, completedCourses, nthModule, moduleCombination, currentClassCombination, onlineCount);
-  // if avlailableClassesOfModule not exist, it means there is no possible classes for this combination. so return false;
-  if (availableClassesOfModule.length === 0) {
-    return 0;
-  }
-
-  let isCombinationExist = false;
-
-  //loop all classes to find all combinations until combination found.
-  for (let i = 0; i < availableClassesOfModule.length; i++) {
-    let selectedClass = availableClassesOfModule[i];
-    currentClassCombination.push(selectedClass);
-
-    //if Coreq exist pushCoreq too.
-    let coreq = data.preqTable[selectedClass.combinedCourseNumber].coreq;
-    if (coreq !== '') {
-      let coreqClasses = data.courses[coreq];
-      coreqClasses.every(coreqClass => {
-        if (checkScheduleOK(coreqClass)) {
-          currentClassCombination.push(coreqClass);
-          return false;
-        } else {
-          return true;
-        }
-      });
-    }
-    //online
-    if (selectedClass.isOnline) {
-      onlineCount--; // OnlineCount == OnlineMax
-    }
-
-    nthModule++;
-    courseCount--;
-
-    //get next available courses
-    isCombinationExist = getBestClassCombinationRecursion(nthModule, bestClassCombination, currentClassCombination, courseCount, onlineCount);
-    if (isCombinationExist) {
-      break;
-    }
-  }
+let checkPreqOK = (data, combinedCourseNumber, completedCourses) => {
+  /*
+  let preqData = data.preqTable[combinedCourseNumber].preq;
+  //parsing
+  //is true?
+  */
+  return true;
 };
+
+let checkCoreqOK = (data, currentCombination, combinedCourseNumber) => {
+  //Exist?
+  console.log('preqTable:', data.preqTable, 'combinedCourseNumber:', combinedCourseNumber);
+
+  //If no data in preqtable => no requirements so return true
+  let courseCoreqData = data.preqTable[combinedCourseNumber];
+  if (courseCoreqData === undefined) {
+    return true;
+  }
+  let coreq = courseCoreqData.coreq;
+  if (coreq === '') {
+    return true;
+  }
+  //If Exist, find one coreq class that schedule OK and if not found return false.
+  let coreqClass = getAvailableCoreqClass(data, currentCombination, combinedCourseNumber);
+  if (coreqClass.length === 0) {
+    return false;
+  }
+  return true;
+};
+
+let checkCoreqExist = (data, combinedCourseNumber) => {
+  //If no data in preqtable => no requirements so return true
+  let courseCoreqData = data.preqTable[combinedCourseNumber];
+  if (courseCoreqData === undefined) {
+    return false;
+  }
+  let coreq = courseCoreqData.coreq;
+  if (coreq === '') {
+    return false;
+  }
+  return true;
+};
+
+let getAvailableCoreqClass = (data, currentCombination, combinedCourseNumber) => {
+  //If no coreq requirment
+  if (!checkCoreqExist(data, combinedCourseNumber)) {
+    return [];
+  }
+  //no classes available
+  let coreq = data.preqTable[combinedCourseNumber].coreq;
+  let availableCoreqClasses = data.courses[coreq].classes;
+  if (availableCoreqClasses.length === 0) {
+    return [];
+  }
+  //check coreq available in current schedule
+  for (let i = 0; i < availableCoreqClasses.length; i++) {
+    let coreqClass = availableCoreqClasses[i];
+    let isScheduleOK = checkScheduleOK(currentCombination, coreqClass);
+    if (isScheduleOK) {
+      return coreqClass;
+    }
+  }
+  return [];
+};
+
+let checkScheduleOK = (currentCombination, classData) => {
+  //check whether is there any coflicts with classData and classes in currentCombination
+
+  let currentClass = classData;
+  for (let i = 0; i < currentCombination.length; i++) {
+    let prevClass = currentCombination[i];
+    let isTimeConflict = !(currentClass.endTime >= prevClass.startTime || currentClass.startTime >= prevClass.endTime);
+    if (prevClass.dayOfWeek === currentClass.dayOfWeek && isTimeConflict) {
+      return false;
+    }
+  }
+  return true;
+};
+
+let checkSevpOK = (onlineCount, classData) => {
+  if (onlineCount <= 0 && classData.campusCode === 'VTL') {
+    return false;
+  }
+  return true;
+};
+
+/*
 
 let getAvailableClassesOfModule = (data, completedCourses, nthModule, moduleCombination, currentClassCombination, onlineCount) => {
   let moduleId = moduleCombination[nthModule];
@@ -172,43 +286,16 @@ let getAvailableClassesOfModule = (data, completedCourses, nthModule, moduleComb
   return availableClasses;
 };
 
-let checkPreqOK = (data, combinedCourseNumber, completedCourses) => {
-  let preqData = data.preqTable[combinedCourseNumber].preq;
-  //parsing
-  //is true?
-  return true;
-};
-
 let checkCoreqOK = (data, combinedCourseNumber) => {
   let coreq = data.preqTable[combinedCourseNumber].coreq;
   if (coreq === '') {
     return true;
   }
-  let availableCoreqCourses = data.courses[coreq];
+  let availableCoreqClasses = data.courses[coreq].classes;
 
-  if (availableCoreqCourses.length === 0) {
+  if (availableCoreqClasses.length === 0) {
     return false;
   }
   return true;
 };
-
-let checkScheduleOK = (currentClassCombination, classData) => {
-  //check whether is there any coflicts with classData and classes in currentClassCombination
-  let isScheduleOK = true;
-  let currentClass = classData;
-  for (let i = 0; i < 10; i++) {
-    let prevClass = currentClassCombination[i];
-    let isNotConflict = currentClass.endTime >= prevClass.startTime || currentClass.startTime >= prevClass.endTime;
-    if (!isNotConflict) {
-      return false;
-    }
-  }
-  return isScheduleOK;
-};
-
-let checkSevpOK = (onlineCount, classData) => {
-  if (onlineCount === 0 && classData.campusCode === 'VTL') {
-    return false;
-  }
-  return true;
-};
+*/
