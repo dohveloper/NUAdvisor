@@ -165,18 +165,53 @@ function convertClassRows(classRows) {
     newClass.startTime = row[15];
     newClass.endTime = row[16];
     //dayofWeek
-    if (row[10] !== undefined) {
+    newClass.dayOfWeek = '';
+    if (row[10] === 'M') {
       newClass.dayOfWeek = 'M';
-    } else if (row[11] !== undefined) {
+    }
+    if (row[11] === 'T') {
       newClass.dayOfWeek = 'T';
-    } else if (row[12] !== undefined) {
+    }
+    if (row[12] === 'W') {
       newClass.dayOfWeek = 'W';
-    } else if (row[13] !== undefined) {
+    }
+    if (row[13] === 'T') {
       newClass.dayOfWeek = 'T';
-    } else if (row[14] !== undefined) {
+    }
+    if (row[14] === 'F') {
       newClass.dayOfWeek = 'F';
-    } else {
-      newClass.dayOfWeek = 'VTL';
+    }
+    //empty warning
+
+    if (row[1] === undefined) {
+      console.log(i + 1, 'th ', 'combinedCourseNumber is empty');
+    }
+    if (row[0] === undefined) {
+      console.log(i + 1, 'th ', 'crn is empty');
+    }
+    if (row[2] === undefined) {
+      console.log(i + 1, 'th ', 'section is empty');
+    }
+    if (row[4] === undefined) {
+      console.log(i + 1, 'th ', 'campusCode is empty');
+    }
+    if (row[5] === undefined) {
+      console.log(i + 1, 'th ', 'maxEnroll is empty');
+    }
+    if (row[6] === undefined) {
+      console.log(i + 1, 'th ', 'enroll is empty');
+    }
+    if (row[7] === undefined) {
+      console.log(i + 1, 'th ', 'seatLeft is empty');
+    }
+    if (row[9] === undefined) {
+      console.log(i + 1, 'th ', 'part is empty');
+    }
+    if (row[15] === undefined) {
+      console.log(i + 1, 'th ', 'startTime is empty');
+    }
+    if (row[16] === undefined) {
+      console.log(i + 1, 'th ', 'endTime is empty');
     }
 
     //2. Check Course already exist

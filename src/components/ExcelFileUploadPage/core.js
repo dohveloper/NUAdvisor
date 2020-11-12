@@ -10,9 +10,18 @@ export let getBestCombination = (data, studentId) => {
   moduleCombinations = getCombinationsOfRemainModules(student);
 
   //2. Get Class Combination
-  let moduleCombination = moduleCombinations[0];
-  classCombinations = getCombinationsOfClasses(data, student, moduleCombination);
-
+  for (let i = 0; i < moduleCombinations.length; i++) {
+    console.log('--------Module test:', i, ' ----------');
+    let moduleCombination = moduleCombinations[i];
+    let testCombinations = getCombinationsOfClasses(data, student, moduleCombination);
+    if (testCombinations.length !== 0) {
+      classCombinations.push(testCombinations);
+    }
+    if (classCombinations.length === 10) {
+      break;
+    }
+  }
+  console.log('----------totalCombinations:', classCombinations, '------------');
   return classCombinations;
 };
 
@@ -35,7 +44,6 @@ let getCombinationsOfRemainModules = student => {
   console.log(combinations);
   return combinations;
 };
-
 //1.1 Recursion
 let getModuleCombinations = (count, listOfModules, current, combinations) => {
   if (count === 0) {
@@ -66,13 +74,14 @@ let getModuleCombinations = (count, listOfModules, current, combinations) => {
 let getCombinationsOfClasses = (data, student, moduleCombination) => {
   let classCombinations = [];
   let currentCombination = [];
-  let courseCount = 2; // number of totalcourses per semester
+  let classCount = moduleCombination.length;
   let onlineCount = 1; // number of online courses per semester
   let nth = 0;
   //Get Completed Courses of Student
   let completedCourses = getCompletedCourses(student);
+  console.log('moduleCombination', moduleCombination);
+  getClassCombinations(classCombinations, classCount, onlineCount, moduleCombination, nth, data, student, completedCourses, currentCombination);
 
-  getClassCombinations(classCombinations, courseCount, onlineCount, moduleCombination, nth, data, student, completedCourses, currentCombination);
   return classCombinations;
 };
 
@@ -85,15 +94,23 @@ let getClassCombinations = (classCombinations, count, onlineCount, moduleCombina
   }
   //2. Get availableClasses for current module
   let availableClassesOfModule = getAvailableClasses(data, student, currentCombination, completedCourses, nth, moduleCombination, onlineCount);
-  console.log(nth, 'th availableClassesOfModule', availableClassesOfModule);
+
+  //TEST START
+  let moduleId = moduleCombination[nth];
+  let modules = data.curriculums[student.major].modules;
+  console.log(moduleId, modules[moduleId].courseOptions);
+  console.log('availableClassesOfModule', availableClassesOfModule);
+  //TEST END
+
   if (availableClassesOfModule.length === 0) {
     return [];
   }
 
   //3.loop all classes to find all combinations until combination found.
   for (let i = 0; i < availableClassesOfModule.length; i++) {
+    let combinationTest = [...currentCombination];
     let selectedClass = availableClassesOfModule[i];
-    currentCombination.push(selectedClass);
+    combinationTest.push(selectedClass);
 
     //completedCourses considering currentCombinations
     let currentCompletedCourses = [...completedCourses];
@@ -102,19 +119,23 @@ let getClassCombinations = (classCombinations, count, onlineCount, moduleCombina
     //if Coreq exist pushCoreq too.
     let isCoreqExist = checkCoreqExist(data, selectedClass.combinedCourseNumber);
     if (isCoreqExist) {
-      let coreqClass = getAvailableCoreqClass(data, currentCombination, selectedClass.combinedCourseNumber);
-      currentCombination.push(coreqClass);
+      let coreqClass = getAvailableCoreqClass(data, combinationTest, selectedClass.combinedCourseNumber);
+      combinationTest.push(coreqClass);
       currentCompletedCourses.push(coreqClass.combinedCourseNumber);
+      console.log('COREQ ADDED');
     }
-    console.log('currentCombination', currentCombination);
+
     //online
     let updatedOnlineCount = onlineCount;
     if (selectedClass.campusCode === 'VTL') {
       updatedOnlineCount = onlineCount - 1; // OnlineCount == OnlineMax
     }
 
+    //TEST START
+    console.log('combinationTest', combinationTest);
+    //TEST END
     //get next available courses
-    getClassCombinations(classCombinations, count - 1, updatedOnlineCount, moduleCombination, nth + 1, data, student, currentCompletedCourses, currentCombination);
+    getClassCombinations(classCombinations, count - 1, updatedOnlineCount, moduleCombination, nth + 1, data, student, currentCompletedCourses, combinationTest);
   }
 };
 
@@ -132,12 +153,11 @@ let getCompletedCourses = student => {
 
 let getAvailableClasses = (data, student, currentCombination, completedCourses, nth, moduleCombination, onlineCount) => {
   let availableClasses = [];
-
   //get Available courses of that module
   let moduleId = moduleCombination[nth];
+  console.log('moduleCombination', moduleCombination);
+  console.log('moduleId:', moduleId, 'curriculum modules:', data.curriculums[student.major]);
   let availableCourses = data.curriculums[student.major].modules[moduleId].availableCourses;
-
-  console.log('availableCourses', availableCourses);
 
   //get Available Classes that are filtered with conditions
   for (let i = 0; i < availableCourses.length; i++) {
@@ -152,12 +172,13 @@ let getAvailableClasses = (data, student, currentCombination, completedCourses, 
 
     course.classes.forEach(classData => {
       let isScheduleOK = checkScheduleOK(currentCombination, classData);
-
+      let isSeatOK = classData.seatLeft > 0;
       //isSevpOK?
       let isSevpOK = checkSevpOK(onlineCount, classData);
 
+      console.log(isPreqOK, isFirstTime, isCoreqOK, isScheduleOK, isSevpOK, isSeatOK);
       //if all ok, then add
-      if (isPreqOK && isFirstTime && isCoreqOK && isScheduleOK && isSevpOK) {
+      if (isPreqOK && isFirstTime && isCoreqOK && isScheduleOK && isSevpOK && isSeatOK) {
         availableClasses.push(classData);
       }
     });
@@ -175,9 +196,6 @@ let checkPreqOK = (data, combinedCourseNumber, completedCourses) => {
 };
 
 let checkCoreqOK = (data, currentCombination, combinedCourseNumber) => {
-  //Exist?
-  console.log('preqTable:', data.preqTable, 'combinedCourseNumber:', combinedCourseNumber);
-
   //If no data in preqtable => no requirements so return true
   let courseCoreqData = data.preqTable[combinedCourseNumber];
   if (courseCoreqData === undefined) {
@@ -232,12 +250,15 @@ let getAvailableCoreqClass = (data, currentCombination, combinedCourseNumber) =>
 
 let checkScheduleOK = (currentCombination, classData) => {
   //check whether is there any coflicts with classData and classes in currentCombination
-
   let currentClass = classData;
+  if (currentClass.campusCode === 'VTL') {
+    return true;
+  }
   for (let i = 0; i < currentCombination.length; i++) {
     let prevClass = currentCombination[i];
     let isTimeConflict = !(currentClass.endTime >= prevClass.startTime || currentClass.startTime >= prevClass.endTime);
     if (prevClass.dayOfWeek === currentClass.dayOfWeek && isTimeConflict) {
+      console.log(prevClass.combinedCourseNumber, ' and ', currentClass.combinedCourseNumber, ' has schedule Conflict on ', prevClass.dayOfWeek);
       return false;
     }
   }

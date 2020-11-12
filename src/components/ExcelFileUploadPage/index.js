@@ -74,8 +74,6 @@ function ExcelFileUpload() {
         />
         <div className="file__blackBottom"></div>
       </div>
-
-      {console.log(excelFile)}
     </div>
   );
 }
