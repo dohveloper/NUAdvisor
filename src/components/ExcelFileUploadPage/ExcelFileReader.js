@@ -3,6 +3,7 @@
  Output : javacript object
 */
 import XLSX from 'xlsx';
+import { preqBlockConverter } from './preq';
 
 export const readExcelFile = (file, callback) => {
   let reader = new FileReader();
@@ -288,6 +289,8 @@ function convertCurriculumRows(curriculumRows) {
 function convertPreqTable(preqcoreqRows) {
   let preqTable = {};
   let combinedCourseNumber;
+  let preqString;
+  let preqBlock;
   let preq;
   let coreq;
   let row;
@@ -296,10 +299,12 @@ function convertPreqTable(preqcoreqRows) {
     row = preqcoreqRows[i];
 
     combinedCourseNumber = row[0];
-    preq = row[1].replace('\r\n', '');
+    //convert preqString to preqBlock
+    preqString = row[1].replace('\r\n', '');
+    preqBlock = preqBlockConverter(preqString);
     coreq = row[2];
 
-    preqTable[combinedCourseNumber] = { preq, coreq };
+    preqTable[combinedCourseNumber] = { preqBlock, coreq };
   }
   return preqTable;
 }

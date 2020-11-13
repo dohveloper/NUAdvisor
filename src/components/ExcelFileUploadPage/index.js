@@ -58,13 +58,11 @@ function ExcelFileUpload() {
           accept=".xls, .xlsx"
           onChange={e => {
             readExcelFile(e.target.files[0], result => {
+              console.log(result);
               //set curriculum available courses data
               //setAvailableCourses(result.courses, result.curriculums);
               //get list of available classes
               //getBestCombination(result, result.students[0].id);
-              let preqBlock = preqBlockConverter('SOC 1100 D- OR PSY 1100 D- OR (PSY 1010 D- AND PSY 1210 D-) OR (PSY 1010 D- AND PSY 1410 D-) OR (PSY 1210 D- AND PSY 1410 D-)');
-              console.log('preqBlock', preqBlock);
-              console.log(preqBlock.isCompleted(['PSY1210', 'PSY1410', 'CHM1102', 'BIO1100', 'BIO1101']));
               //getClassCombination(4,1);
               //setNextCrns(result.students, result.curriculums);
               dispatch({ type: 'upload', value: result });

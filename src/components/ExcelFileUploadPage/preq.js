@@ -63,28 +63,6 @@ class PreqBlock {
   }
 }
 
-let newisCompleted = (preqBlock, completedCourses) => {
-  let stack = [];
-  let isCompletedList = { 0: [], 1: [], 2: [] };
-  let isCompleted;
-  let level = 0;
-  stack.push(preqBlock);
-
-  while (stack.length) {
-    let current = stack.pop();
-    if (current.operation === null) {
-      isCompleted = completedCourses.includes(current.preqBlocks[0]);
-      isCompletedList[level].push(isCompleted);
-    }
-    if (current.operation !== null) {
-      current.preqBlocks.forEach(preqBlock => {
-        stack.push(preqBlock);
-      });
-    }
-    level++;
-  }
-};
-
 /*
 - NAME   : preqBlockConverter
 - PURPOSE: parse preqBlockString into preqBlock
