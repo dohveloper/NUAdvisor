@@ -43,17 +43,12 @@ class PreqBlock {
     let isCompletedList = [];
     for (let i = 0; i < preqBlock.preqBlocks.length; i++) {
       let childPreqBlock = preqBlock.preqBlocks[i];
-
-      console.log('--CHILD START--:', childPreqBlock);
       let isCompleted = self.isCompletedRecursion(childPreqBlock, completedCourses);
-      console.log('--CHILD END--:');
-      console.log('result', isCompleted);
+
       if (preqBlock.operation === 'OR' && isCompleted === true) {
-        console.log('haha one true of OR found -> return true');
         return true;
       }
       if (preqBlock.operation === 'AND' && isCompleted === false) {
-        console.log('haha one false of AND found -> return false');
         return false;
       }
       isCompletedList.push(isCompleted);
