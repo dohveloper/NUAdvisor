@@ -8,20 +8,20 @@ import { setAvailableCourses, getClassCombinationsByStudentId } from './nuadviso
 const imagePath = process.env.PUBLIC_URL + '/assets/img';
 
 const initialState = {
-  excelFile: null
+  data: null
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
     case 'upload':
-      return { ...state, excelFile: action.value };
+      return { ...state, data: action.value };
     default:
       return state;
   }
 };
 
 function ExcelFileUpload() {
-  const [excelFile, dispatch] = useReducer(reducer, initialState);
+  const [data, dispatch] = useReducer(reducer, initialState);
   const history = useHistory();
   return (
     <div className="file__page">
@@ -56,7 +56,6 @@ function ExcelFileUpload() {
           accept=".xls, .xlsx"
           onChange={e => {
             readExcelFile(e.target.files[0], result => {
-              console.log(result);
               //set curriculum available courses data
               setAvailableCourses(result.courses, result.curriculums);
               //get list of available classes
@@ -71,6 +70,7 @@ function ExcelFileUpload() {
             e.target.value = null;
           }}
         />
+        {console.log('data', data)}
         <div className="file__blackBottom"></div>
       </div>
     </div>
