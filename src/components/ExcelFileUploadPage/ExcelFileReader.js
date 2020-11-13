@@ -291,7 +291,6 @@ function convertPreqTable(preqcoreqRows) {
   let combinedCourseNumber;
   let preqString;
   let preqBlock;
-  let preq;
   let coreq;
   let row;
 
@@ -301,7 +300,11 @@ function convertPreqTable(preqcoreqRows) {
     combinedCourseNumber = row[0];
     //convert preqString to preqBlock
     preqString = row[1].replace('\r\n', '');
-    preqBlock = preqBlockConverter(preqString);
+    if (preqString !== '') {
+      preqBlock = preqBlockConverter(preqString);
+    } else {
+      preqBlock = null;
+    }
     coreq = row[2];
 
     preqTable[combinedCourseNumber] = { preqBlock, coreq };

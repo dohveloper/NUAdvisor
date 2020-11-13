@@ -3,9 +3,7 @@ import './ExcelFileUploadPage.css';
 import { readExcelFile } from './ExcelFileReader';
 import { FaDownload, FaUpload } from 'react-icons/fa';
 import { useHistory } from 'react-router-dom';
-import { setAvailableCourses, setNextCrns } from './nuadvisor';
-import { getBestCombination } from './core';
-import { preqBlockConverter } from './preq';
+import { setAvailableCourses, getClassCombinationsByStudentId } from './nuadvisor';
 
 const imagePath = process.env.PUBLIC_URL + '/assets/img';
 
@@ -60,11 +58,11 @@ function ExcelFileUpload() {
             readExcelFile(e.target.files[0], result => {
               console.log(result);
               //set curriculum available courses data
-              //setAvailableCourses(result.courses, result.curriculums);
+              setAvailableCourses(result.courses, result.curriculums);
               //get list of available classes
-              //getBestCombination(result, result.students[0].id);
-              //getClassCombination(4,1);
-              //setNextCrns(result.students, result.curriculums);
+              let classCombinations = getClassCombinationsByStudentId(result, result.students[0].id);
+              console.log(classCombinations);
+
               dispatch({ type: 'upload', value: result });
               history.push('/');
             });
