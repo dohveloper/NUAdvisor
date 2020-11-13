@@ -296,7 +296,7 @@ function convertPreqTable(preqcoreqRows) {
     row = preqcoreqRows[i];
 
     combinedCourseNumber = row[0];
-    preq = row[1];
+    preq = row[1].replace('\r\n', '');
     coreq = row[2];
 
     preqTable[combinedCourseNumber] = { preq, coreq };
