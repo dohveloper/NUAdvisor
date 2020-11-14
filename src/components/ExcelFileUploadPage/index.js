@@ -1,27 +1,13 @@
-import React, { useReducer } from 'react';
+import React, { useContext } from 'react';
+import { DataContext } from '../App';
 import './ExcelFileUploadPage.css';
 import { readExcelFile } from './ExcelFileReader';
 import { FaDownload, FaUpload } from 'react-icons/fa';
 import { useHistory } from 'react-router-dom';
-import { getClassCombinationsByStudentId } from './nuadvisor';
-
 const imagePath = process.env.PUBLIC_URL + '/assets/img';
 
-const initialState = {
-  data: null
-};
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case 'upload':
-      return { ...state, data: action.value };
-    default:
-      return state;
-  }
-};
-
 function ExcelFileUpload() {
-  const [data, dispatch] = useReducer(reducer, initialState);
+  const { updateData } = useContext(DataContext);
   const history = useHistory();
   return (
     <div className="file__page">
@@ -56,15 +42,8 @@ function ExcelFileUpload() {
           accept=".xls, .xlsx"
           onChange={e => {
             readExcelFile(e.target.files[0], result => {
-              //set curriculum available courses data
-              //setAvailableCourses(result.courses, result.curriculums);
-              //get list of available classes
-              console.log(result);
-
-              //let classCombinations = getClassCombinationsByStudentId(result, result.students[0].id);
-              //console.log(classCombinations);
-
-              dispatch({ type: 'upload', value: result });
+              //HOW TO USE::let classCombinations = getClassCombinationsByStudentId(result, result.students[0].id, 5);
+              updateData(result);
               history.push('/');
             });
           }}
@@ -72,7 +51,6 @@ function ExcelFileUpload() {
             e.target.value = null;
           }}
         />
-        {console.log('data', data)}
         <div className="file__blackBottom"></div>
       </div>
     </div>

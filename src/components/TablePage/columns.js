@@ -1,42 +1,39 @@
 export const COLUMNS = [
   {
-    Header: 'NUID',
-    accessor: 'id'
+    Header: 'MAJOR',
+    accessor: 'major'
   },
   {
     Header: 'Name',
     accessor: 'name'
   },
   {
+    Header: 'NUID',
+    accessor: 'id'
+  },
+  {
     Header: 'Email',
     accessor: 'email'
   },
+
   {
-    Header: 'CRN1',
-    accessor: 'crn1'
+    Header: 'REMAIN',
+    accessor: 'remainModules'
   },
   {
-    Header: 'CRN2',
-    accessor: 'crn2'
+    Header: 'Onground',
+    accessor: 'onground'
   },
   {
-    Header: 'CRN3',
-    accessor: 'crn3'
+    Header: 'Online',
+    accessor: 'online'
   },
   {
-    Header: 'CRN4',
-    accessor: 'crn4'
+    Header: 'CRNS',
+    accessor: 'crns'
   },
   {
-    Header: 'CRN5',
-    accessor: 'crn5'
-  },
-  {
-    Header: 'CRN6',
-    accessor: 'crn6'
-  },
-  {
-    Header: 'Status',
-    accessor: 'status'
+    Header: 'GET CRNS',
+    accessor: 'getCrns'
   }
 ];

@@ -1,4 +1,4 @@
-export let getClassCombinationsByStudentId = (data, studentId) => {
+export let getClassCombinationsByStudentId = (data, studentId, numberOfCombinations = 10) => {
   let moduleCombinations = [[1, 2, 3, 5]];
   let classCombinations = [];
 
@@ -11,17 +11,15 @@ export let getClassCombinationsByStudentId = (data, studentId) => {
 
   //2. Get Class Combination
   for (let i = 0; i < moduleCombinations.length; i++) {
-    console.log('--------Module test:', i, ' ----------');
     let moduleCombination = moduleCombinations[i];
     let testCombinations = getCombinationsOfClasses(data, student, moduleCombination);
     if (testCombinations.length !== 0) {
       classCombinations.push(testCombinations);
     }
-    if (classCombinations.length === 10) {
+    if (classCombinations.length === numberOfCombinations) {
       break;
     }
   }
-  console.log('----------totalCombinations:', classCombinations, '------------');
   return classCombinations;
 };
 
@@ -41,7 +39,6 @@ let getCombinationsOfRemainModules = student => {
 
   //get Combination of Remain modules
   getModuleCombinations(count, listOfModules, current, combinations);
-  console.log(combinations);
   return combinations;
 };
 //1.1 Recursion
@@ -79,7 +76,6 @@ let getCombinationsOfClasses = (data, student, moduleCombination) => {
   let nth = 0;
   //Get Completed Courses of Student
   let completedCourses = getCompletedCourses(student);
-  console.log('moduleCombination', moduleCombination);
   getClassCombinations(classCombinations, classCount, onlineCount, moduleCombination, nth, data, student, completedCourses, currentCombination);
 
   return classCombinations;
@@ -94,13 +90,6 @@ let getClassCombinations = (classCombinations, count, onlineCount, moduleCombina
   }
   //2. Get availableClasses for current module
   let availableClassesOfModule = getAvailableClasses(data, student, currentCombination, completedCourses, nth, moduleCombination, onlineCount);
-
-  //TEST START
-  let moduleId = moduleCombination[nth];
-  let modules = data.curriculums[student.major].modules;
-  console.log(moduleId, modules[moduleId].courseOptions);
-  console.log('availableClassesOfModule', availableClassesOfModule);
-  //TEST END
 
   if (availableClassesOfModule.length === 0) {
     return [];
@@ -122,7 +111,6 @@ let getClassCombinations = (classCombinations, count, onlineCount, moduleCombina
       let coreqClass = getAvailableCoreqClass(data, combinationTest, selectedClass.combinedCourseNumber);
       combinationTest.push(coreqClass);
       currentCompletedCourses.push(coreqClass.combinedCourseNumber);
-      console.log('COREQ ADDED');
     }
 
     //online
@@ -131,16 +119,12 @@ let getClassCombinations = (classCombinations, count, onlineCount, moduleCombina
       updatedOnlineCount = onlineCount - 1; // OnlineCount == OnlineMax
     }
 
-    //TEST START
-    console.log('combinationTest', combinationTest);
-    //TEST END
     //get next available courses
     getClassCombinations(classCombinations, count - 1, updatedOnlineCount, moduleCombination, nth + 1, data, student, currentCompletedCourses, combinationTest);
   }
 };
 
 //helper
-
 let getCompletedCourses = student => {
   let completedCourses = [];
   student.curriculumModules.forEach(module => {
@@ -155,8 +139,6 @@ let getAvailableClasses = (data, student, currentCombination, completedCourses, 
   let availableClasses = [];
   //get Available courses of that module
   let moduleId = moduleCombination[nth];
-  console.log('moduleCombination', moduleCombination);
-  console.log('moduleId:', moduleId, 'curriculum modules:', data.curriculums[student.major]);
   let availableCourses = data.curriculums[student.major].modules[moduleId].availableCourses;
 
   //get Available Classes that are filtered with conditions
@@ -176,7 +158,6 @@ let getAvailableClasses = (data, student, currentCombination, completedCourses, 
       //isSevpOK?
       let isSevpOK = checkSevpOK(onlineCount, classData);
 
-      console.log(isPreqOK, isFirstTime, isCoreqOK, isScheduleOK, isSevpOK, isSeatOK);
       //if all ok, then add
       if (isPreqOK && isFirstTime && isCoreqOK && isScheduleOK && isSevpOK && isSeatOK) {
         availableClasses.push(classData);
