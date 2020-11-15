@@ -17,10 +17,10 @@ function App() {
       <DataContext.Provider value={contextValue}>
         <Router>
           <Switch>
-            <Route path="/file">
+            <Route exact path="/">
               <ExcelFileUpload />
             </Route>
-            <Route exact path="/">
+            <Route exact path="/students">
               <Header />
               <TablePage />
             </Route>

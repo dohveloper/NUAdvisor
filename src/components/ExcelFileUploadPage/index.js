@@ -44,7 +44,7 @@ function ExcelFileUpload() {
             readExcelFile(e.target.files[0], result => {
               //HOW TO USE::let classCombinations = getClassCombinationsByStudentId(result, result.students[0].id, 5);
               updateData(result);
-              history.push('/');
+              history.push('/students');
             });
           }}
           onClick={e => {
