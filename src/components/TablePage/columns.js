@@ -12,28 +12,7 @@ export const COLUMNS = [
     accessor: 'id'
   },
   {
-    Header: 'Email',
+    Header: 'EMAIL',
     accessor: 'email'
-  },
-
-  {
-    Header: 'REMAIN',
-    accessor: 'remainModules'
-  },
-  {
-    Header: 'Onground',
-    accessor: 'onground'
-  },
-  {
-    Header: 'Online',
-    accessor: 'online'
-  },
-  {
-    Header: 'CRNS',
-    accessor: 'crns'
-  },
-  {
-    Header: 'GET CRNS',
-    accessor: 'getCrns'
   }
 ];

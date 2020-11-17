@@ -1,9 +1,9 @@
 import React from 'react';
 import './Toolbar.css';
-import Searchbar from '../Searchbar';
-import Filter from '../Filter';
+import Searchbar from './Searchbar';
+import Filter from './Filter';
 
-function Toolbar() {
+function Toolbar({ filter, setFilter }) {
   return (
     <div className="toolbar">
       <div className="toolbar__left">
@@ -13,7 +13,7 @@ function Toolbar() {
         <Filter />
       </div>
       <div className="toolbar__right">
-        <Searchbar />
+        <Searchbar filter={filter} setFilter={setFilter} />
       </div>
     </div>
   );

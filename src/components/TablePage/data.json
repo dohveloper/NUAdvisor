@@ -5,6 +5,8 @@
       "id": "001352184",
       "name": "Doh Kim",
       "email": "kim.doh@northeastern.edu",
+      "remainCourses": 12,
+      "nextClassesCombinations": [],
       "curriculumModules": [
         {
           "id": 1,
